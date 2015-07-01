@@ -38,3 +38,19 @@ to generate a component:
 yo gulp-starterkit:component
 ```
 
+begin with project (app)
+
+```
+npm install
+gulp serve
+```
+
+working with sample
+
+```
+cd sample
+npm install
+gulp serve
+```
+
+
