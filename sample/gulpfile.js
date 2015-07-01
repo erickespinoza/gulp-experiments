@@ -32,7 +32,7 @@ gulp.task('watch', function() {
     'app/styles/**/*.scss',
     'app/components/**/*.scss',
     'app/pages/**/*.scss'
-  ], ['sass:server']);
+  ], ['sass']);
   
   gulp.watch([
       'app/assets/scripts/{,*/}*.js',
