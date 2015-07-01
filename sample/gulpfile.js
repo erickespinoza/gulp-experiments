@@ -39,14 +39,15 @@ gulp.task('watch', function() {
       'app/components/**/*.js',
       'app/pages/**/*.js',
       '!app/assets/scripts/vendor/*'
-  ], ['jshint:server', 'copy:server']).on('ready', reload);
+  ], ['jshint:server', 'copy:server']).on('ready', browserSync.reload);
 
   gulp.watch([
     'app/{pages,components,data}/**/*.{json,yaml}',
     'app/components/**/*.hbs',
     'app/layouts/*.hbs',
     'app/pages/**/*.hbs'
-  ], ['watch-html']).on('ready', reload);
+    // ], ['assemble:server']);
+  ], ['watch-html']).on('ready', browserSync.reload);
 
 
   // gulp.watch([
@@ -289,26 +290,27 @@ gulp.task('copy:dist', function () {
 //     .pipe(gulp.dest('.tmp/assets/scripts'));
 // });
 
-gulp.task('watch-html', function(){
-  runSequence('assemble:server', 'aux-html');
+gulp.task('watch-html', ['aux-html'], function(){
+  // runSequence('aux-html');
+  browserSync.reload();
 });
 
 // gulp.task('copyhtml', browserSync.reload);
-gulp.task('aux-html', function(){
-  var assets = $.useref.assets({searchPath: ['dist', 'app', '.']});
+gulp.task('aux-html', ['assemble:server'], function(){
+  // var assets = $.useref.assets({searchPath: ['dist', 'app', '.']});
 
   return gulp.src('.tmp/**/*.html')
     .pipe($.rename({
       dirname: ''
     }))
-    .pipe(assets)
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.csso()))
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    // .pipe(assets)
+    // .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.css', $.csso()))
+    // .pipe(assets.restore())
+    // .pipe($.useref())
+    // .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('.tmp/'))
-    .pipe(reload({stream: true}));
+    // .pipe(reload({stream: true}));
 });
 
 
