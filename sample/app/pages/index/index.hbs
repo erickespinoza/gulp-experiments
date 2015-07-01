@@ -1,0 +1,126 @@
+---
+list: none
+layout: minimal
+---
+
+
+<div class="index" data-action="index">
+    <h1>Baxalta Page Index</h1>
+    <p class="lead">Use the links in each section below to view our living reference materials, as well as pages which are in progress, with QA and done/ready for integration.</p>
+
+    {{!-- Move pages to the appropriate section below by adding or modifying their 'list' YAML attribute to one of the following: reference, in-progress, in-test, done. --}}
+
+    <h2>Reference</h2>
+    <ul>
+        <li>
+            <a href="component-library.html">Component Library</a>
+        </li>
+        <li>
+            <a href="component-library--windowshades.html">Component Library - Windowshades</a>
+        </li>
+        <li>
+            <a href="icon-library.html">Icon Library</a>
+        </li>
+        <li>
+            <a href="styleguide.html">Styleguide</a>
+        </li>
+        <li>
+            <a href="tracking-library.html">Tracking Library</a>
+        </li>
+    </ul>
+
+    <h2>In Progress</h2>
+    {{!-- <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'in-progress'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul> --}}
+
+    <h2>In Testing</h2>
+    {{!-- <ul>
+        {{#withSort pages 'data.title'}}
+            {{#isnt this.data.index 'none'}}
+                {{#is this.data.list 'in-test'}}
+                    {{#unless_eq basename compare='title'}}
+                        <li>
+                            <a href="{{pagename}}">{{data.title}}</a>
+                            {{#if data.description}}
+                                <span class="description">{{data.description}}</span>
+                            {{/if}}
+                        </li>
+                    {{/unless_eq}}
+                {{/is}}
+            {{/isnt}}
+        {{/withSort}}
+    </ul> --}}
+
+    <h2>Done</h2>
+    <ul>
+        <li>
+            <a href="404.html">404 Error Page</a>
+        </li>
+        <li>
+            <a href="500.html">500 Error Page</a>
+        </li>
+        <li>
+            <a href="about-us-leadership.html">About Us - Leadership</a>
+        </li>
+        <li>
+            <a href="contact-us.html">Contact Us</a>
+        </li>
+        <li>
+            <a href="country-selector.html">Country Selector</a>
+        </li>
+        <li>
+            <a href="product-patent.html">Global Legal Header/Footer (Product Patents)</a>
+        </li>
+        <li>
+            <a href="homepage.html">Homepage</a>
+        </li>
+        <li>
+            <a href="landing-page.html">Landing Page</a>
+        </li>
+        <li>
+            <a href="news-article.html">News Article</a>
+        </li>
+        <li>
+            <a href="our-values.html">Our Values</a>
+        </li>
+        <li>
+            <a href="pipeline.html">Pipeline</a>
+        </li>
+        <li>
+            <a href="press-release.html">Press Release</a>
+        </li>
+        <li>
+            <a href="press-releases.html">Press Releases List</a>
+        </li>
+        <li>
+            <a href="product-list.html">Product Listing</a>
+        </li>
+        <li>
+            <a href="search.html">Search</a>
+                <span class="description">(Requires CORS extension for pre-production testing)</span>
+        </li>
+        <li>
+            <a href="sitemap.html">Sitemap</a>
+        </li>
+        <li>
+            <a href="thank-you.html">Thank You</a>
+        </li>
+        <li>
+            <a href="ventures-form.html">Ventures Form</a>
+        </li>
+    </ul>
+</div>

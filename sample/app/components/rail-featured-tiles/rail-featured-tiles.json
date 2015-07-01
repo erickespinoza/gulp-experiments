@@ -1,0 +1,20 @@
+{
+	"header":"Additional Resources",
+	"tiles": [
+		{
+			"image":"assets/images/tile-background.jpg",
+			"text":"Is alias et faces modit dis voluptatur explis",
+			"href":"#"
+		},
+		{
+			"image":"assets/images/tile-background.jpg",
+			"text":"Is alias et faces modit dis voluptatur explis",
+			"href":"#"
+		},
+		{
+			"image":"assets/images/tile-background.jpg",
+			"text":"Is alias et faces modit dis voluptatur explis",
+			"href":"#"
+		}
+	]
+}

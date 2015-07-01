@@ -1,0 +1,34 @@
+{
+	"results": [
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"img": "http://lorempixel.com/150/150/nature/3",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum pharetra est, fringilla hendrerit augue mollis vel, laoreet dignissim.",
+			"date": "May 9, 2015"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"img": "http://lorempixel.com/150/150/nature/4",
+			"copy": "Fusce volutpat, enim ut laoreet dignissim, nisi sem tempus lectus. Nulla bibendum pharetra est, fringilla hendrerit augue.",
+			"date": "May 8, 2015"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"img": "http://lorempixel.com/150/150/nature/5",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum pharetra est, fringilla hendrerit augue mollis vel. Fusce volutpat.",
+			"date": "May 7, 2015"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"img": "http://lorempixel.com/150/150/nature/6",
+			"copy": "Fringilla ulla bibendum pharetra est, hendrerit augue mollis vel. Fusce volutpat, enim ut laoreet dignissim, nisi sem tempus lectus.",
+			"date": "May 6, 2015"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"img": "http://lorempixel.com/150/150/nature/4",
+			"copy": "Dolor sit amet, consectetur adipiscing elit. Nulla bibendum pharetra est, fringilla hendrerit augue mollis vel sem tempus.",
+			"date": "May 8, 2015"
+		}
+	]
+}

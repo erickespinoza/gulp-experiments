@@ -1,0 +1,21 @@
+<div class="address-list">
+
+	<h3>Name of Region</h3>
+		
+	<div class="address-list__options">
+        <ul>
+            {{#each this }}
+                <li>
+                	{{#isnt secondary-header "" }}
+						<p><strong>{{ secondary-header }}</strong><br />
+                	{{/isnt}}
+                	<strong>{{ location }}</strong><br />
+                    {{ address1 }}<br />
+                	{{ address2 }}</p>
+                	<p>{{ phone }}</p>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>

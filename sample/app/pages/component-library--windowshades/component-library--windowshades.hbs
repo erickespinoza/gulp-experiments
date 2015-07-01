@@ -1,0 +1,53 @@
+---
+title: Component Library - Windowshades
+slug: component-library
+list: reference
+layout: minimal
+---
+
+<div class="styleguide component-library component-library--windowshade container-fluid" data-action="componentLibrary">
+    <h1>Windowshade Library</h1>
+
+    <p class="lead">All windowshades variants which are shareable across various pages of the site should be included here for reference.</p>
+
+    {{!-- <h2 class="styleguide__heading2">Partial Name</h2>
+    {{> partial-name }} --}}
+
+    <h2 class="styleguide__heading2">.windowshade group</h2>
+    <div class="windowshade-group">
+        {{#parseJSON '{"id": "ws1", "group":"group1"}'}}
+        {{> windowshade}}
+        {{/parseJSON}}
+
+        {{#parseJSON '{"id": "ws2", "group":"group1", "content": "image"}'}}
+        {{> windowshade}}
+        {{/parseJSON}}
+
+        {{#parseJSON '{"id": "ws3", "group":"group1", "content": "list"}'}}
+        {{> windowshade}}
+        {{/parseJSON}}
+    </div>
+
+    <h2 class="styleguide__heading2">.windowshade /active-sm</h2>
+
+    {{#parseJSON '{"id": "ws4", "active-sm": "true"}'}}
+    {{> windowshade}}
+    {{/parseJSON}}
+    
+
+    <h2 class="styleguide__heading2">.windowshade /active-lg</h2>
+    
+    {{#parseJSON '{"id": "ws5", "active-lg": "true"}'}}
+    {{> windowshade}}
+    {{/parseJSON}}
+
+    <h2 class="styleguide__heading2">.windowshade /active-lg /active-sm</h2>
+    
+    {{#parseJSON '{"id": "ws6", "active-sm": "true", "active-lg": "true"}'}}
+    {{> windowshade}}
+    {{/parseJSON}}
+
+    <h2 class="styleguide__heading2">Use url to open ws with smooth scroll</h2>
+    <a href="?ws=ws1">Go to #ws1</a>
+
+</div>

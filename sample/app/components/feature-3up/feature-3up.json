@@ -1,0 +1,46 @@
+{
+    "home": {
+        "title": "Lorem ipsum dolor",
+        "tiles": [
+            {
+                "title": "Lorem ipsum dolor sit",
+                "url": "landing-page.html",
+                "img": "http://lorempixel.com/900/600/nature/3",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+            },
+            {
+                "title": "Lorem ipsum dolor sit",
+                "url": "landing-page.html",
+                "img": "http://lorempixel.com/900/600/nature/4",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+            },
+            {
+                "title": "Lorem ipsum dolor sit",
+                "url": "landing-page.html",
+                "img": "http://lorempixel.com/900/600/nature/5",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt."
+            }
+        ]
+    },
+    "related": {
+        "title": "Related Content",
+        "subtitle": "Different Approaches to Treating ESRD",
+        "tiles": [
+            {
+                "url": "news-article.html",
+                "img": "http://lorempixel.com/900/600/nature/6",
+                "copy": "Maddy Warren was diagnosed with nephrotic syndrome at the age of 13. Maddy finds HD to be a good fit for her treatment needs and lifestyle."
+            },
+            {
+                "url": "news-article.html",
+                "img": "http://lorempixel.com/900/600/nature/7",
+                "copy": "Maddy Warren was diagnosed with nephrotic syndrome at the age of 13. Maddy finds HD to be a good fit for her treatment needs and lifestyle."
+            },
+            {
+                "url": "news-article.html",
+                "img": "http://lorempixel.com/900/600/nature/8",
+                "copy": "Maddy Warren was diagnosed with nephrotic syndrome at the age of 13. Maddy finds HD to be a good fit for her treatment needs and lifestyle."
+            }
+        ]
+    }
+}

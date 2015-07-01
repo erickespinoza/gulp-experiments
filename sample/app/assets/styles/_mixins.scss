@@ -1,0 +1,230 @@
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1);}
+    25% {-webkit-transform: scale(1.02, 1.02);}
+    100% {-webkit-transform: scale(1, 1);}
+}
+
+@mixin pulse($duration: 2s, $count: 2) {
+    -webkit-animation: pulsate $duration ease;
+    -webkit-animation-iteration-count: $count;
+}
+
+@mixin transition($property: all, $timing: 400ms) {
+    transition: $property $timing ease-in-out;
+}
+
+@mixin text-shadow($color: $brand-black, $opacity: .15) {
+    text-shadow: 1px 1px 2px rgba($color,$opacity);
+}
+
+@mixin container() {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 $pad;
+    width: 100%;
+    max-width: $content-max-width;
+}
+
+@mixin full-bleed() {
+    margin-left: -($pad);
+    margin-right: -($pad);
+    padding-left: $pad*1.5;
+    padding-right: $pad*1.5;
+    width: calc(100% + 40px);
+}
+
+@mixin color-item($colorName) {
+    &:before {
+        background-color: #{$colorName};
+    }
+    &:after {
+        content: '' + $colorName;
+    }
+}
+
+@mixin btn-color-scheme($color) {
+    border: 1px solid $color;
+    color: $color;
+    &:hover,
+    &:focus {
+        background-color: rgba($color,.1);
+        color: $color;
+    }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin side-by-side-mobile() {
+    @include respond-to($screen-sm-max, max) {
+        .feature-tile {
+            border-top: 1px solid #ddd;
+            overflow: hidden;
+
+            &__img {
+                float: left;
+                width: 30%;
+                margin-right: 3%;
+            }
+            &__subtitle {
+                font-size: $font-size-base;
+            }
+            &__copy {
+                font-size: $font-size-small;
+            }
+            &__icon {
+                font-size: $font-size-small;
+            }
+        }
+    }
+}
+
+
+/* ----- Gradients ----- */
+
+@mixin gradient($color1, $color2, $direction: bottom) {
+    background: $color1;
+    background: linear-gradient(to $direction, $color1 0%, $color2 100%); /* W3C */
+}
+
+@mixin border-gradient-bottom($color, $height, $width){
+    background-image: 
+        linear-gradient(transparent, $color);
+    background-size: $width 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+    bottom: 0;
+    content: "";
+    height: $height;
+    position: absolute;
+    right: -$width;
+    width: $width;
+}
+
+@mixin gradient-light-blue($direction: bottom) {
+  @include gradient(#f3f8fb, #fff, $direction);
+}
+
+@mixin gradient-med-blue($direction: bottom) {
+  @include gradient(#e1f5fd, $brand-white);
+}
+
+/* ----- Responsive ----- */
+
+// Dynamic Media Queries
+// Modified from https://coderwall.com/p/brz5-g
+
+// 1st argument = breakpoint value
+// 2nd argument (optional) = either 2nd breakpoint value or the word max to make it a max-width query
+@mixin respond-to($val, $val2: none) {
+    @if ($val2 == none) {
+    	@media (min-width: $val) { @content; }
+
+    } @else if ($val2 == max) {
+    	@media (max-width: $val) { @content; }
+
+    } @else {
+    	@media (min-width: $val) and (max-width: $val2) { @content; }
+    }
+}
+
+
+/* ----- Fonts ----- */
+
+@mixin font-display() {
+    font-family: $font-family-display;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-display-light() {
+    font-family: $font-family-display;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin font-display-bold() {
+    font-family: $font-family-display;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-body() {
+    font-family: $font-family-default; 
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@mixin font-body-light() {
+    font-family: $font-family-default; 
+    font-weight: 300; 
+    font-style: normal;
+}
+
+@mixin font-body-bold() {
+    font-family: $font-family-default; 
+    font-weight: 700; 
+    font-style: normal;
+}
+
+
+/* ----- Flexbox ------ */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-flow($values) {
+  -webkit-flex-flow: $values;
+  flex-flow: $values;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+/* ----- Colums without wrapping components ----- */
+
+@mixin columns-number($number){
+  columns: $number;
+  -webkit-columns: $number;
+  -moz-columns: $number;
+  -webkit-column-count:$number;
+  -moz-column-count:$number;
+  -ms-column-count:$number;
+  -o-column-count:$number;
+  column-count:$number;
+}
+
+@mixin columns-gap($gap){
+  -webkit-column-gap: $gap;
+  -moz-column-gap: $gap;
+  -ms-column-gap: $gap;
+  -o-column-gap: $gap;
+  column-gap: $gap;
+}
+

@@ -1,0 +1,42 @@
+/* ----- Address list component styles ----- */
+
+.address-list {
+
+	h3 {
+		// font-size: $heading-size-xs !important;
+		margin: $pad*2 0 $pad*1.5;
+	}
+
+    &__options {
+
+        ul {
+            // @include columns-number(1);
+            // @include columns-gap(0);
+            overflow: hidden;
+
+            @include respond-to($tablet) {
+				// @include columns-number(2);
+                // @include columns-gap(25px);
+            }
+
+            list-style: none;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+
+            li {
+                line-height: 1.85em;
+                margin: 0 auto $pad*2 auto;
+
+                @include respond-to($tablet) {
+                    float: left;
+                    width: 45%;
+                    padding-right: 5%;
+                    min-height: 10em;
+                }
+
+            }
+        }
+    }
+
+}

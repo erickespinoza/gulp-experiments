@@ -1,0 +1,37 @@
+<div class="windowshade 
+
+{{#is active-sm 'true'}}active-sm{{/is}} 
+
+{{#is active-lg 'true'}}active-lg{{/is}}
+
+" {{#if group}}data-group="{{group}}"{{/if}} id="{{id}}">
+    <a href="#" class="windowshade__title ws-trigger" aria-controls="{{id}}" role="tab">Lorem ipsum dolor sit<span class="windowshade__icon"></span></a>
+    <div class="windowshade__body" aria-labelledby="{{id}}" role="tabpanel">
+
+        {{#is content 'image' }}
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor est magnam accusantium iure omnis dignissimos placeat ipsa consectetur, optio excepturi, impedit laborum itaque, quisquam quas dicta delectus a fugit repudiandae vitae culpa temporibus saepe. Iste aperiam, in a at excepturi distinctio ipsa maiores dolor quisquam assumenda, ullam nostrum odit animi.</p>
+        <div class="image-container onethird-left">
+            <a href="#">
+                <img src="http://placehold.it/400x400/" />
+            </a>
+            <p class="caption">Caption for the image above.</p>
+        </div>
+        {{/is}}
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non et molestias nostrum commodi inventore deleniti beatae suscipit nisi? Ea ipsa incidunt placeat vero neque perspiciatis porro enim quod quam dolorem consequuntur nostrum sunt, accusantium fugiat velit atque mollitia, eum fuga voluptatem iusto repudiandae minima! Soluta deleniti cupiditate commodi quo consequuntur? Voluptatem, et consequuntur laborum nemo obcaecati aut quam eaque vel facere ad totam voluptates maiores quidem placeat exercitationem. Consequatur dicta quaerat rerum architecto magnam cumque eos, qui distinctio repellat eum ratione expedita minus odit alias voluptate, ea excepturi! Maxime omnis exercitationem dolores, sequi eius itaque. Ea inventore omnis sit tempora.</p>
+
+        {{#is content 'list'}}
+            <ul>
+                <li><a href="#">Link title</a></li>
+                <li><a href="#">Longer link title</a>
+                    <ul>
+                        <li>Here's a <a href="#">link title</a></li>
+                        <li>An unlinked sub-item</li>
+                    </ul>
+                </li>
+                <li><a href="#">Link title</a></li>
+                <li><a href="#">The longest link title example</a></li>
+            </ul>
+        {{/is}}
+    </div>
+</div>

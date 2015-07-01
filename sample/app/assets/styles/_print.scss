@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    PRINTED STYLES
+\*------------------------------------*/
+
+@media print {
+    .page-actions,
+    .feature-3up,
+    .video-container,
+    .footer__wrapper:not(.footer__gray-border),
+    .footer__copyrights ul,
+    .page-sidebar .rail-featured-tiles,
+    .windowshade__icon {
+	    display: none !important;
+    }
+    .windowshade__body {
+    	display: block !important;
+    }
+}

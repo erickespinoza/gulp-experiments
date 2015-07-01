@@ -1,0 +1,94 @@
+{
+    "therapies": {
+        "carousel-title":"Our Therapies",
+        "carousel-title-link":"#",
+        "variant": [
+            "no-text",
+            "color-fade"
+        ],
+        "carousel-slides": [
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/5/",
+                "image-color":"http://lorempixel.com/232/47/abstract/5/" 
+            },
+             {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/1/",
+                "image-color":"http://lorempixel.com/232/47/abstract/1/" 
+            },
+             {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/2/",
+                "image-color":"http://lorempixel.com/232/47/abstract/2/" 
+            },
+             {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/3/",
+                "image-color":"http://lorempixel.com/232/47/abstract/3/" 
+            },
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/4/",
+                "image-color":"http://lorempixel.com/232/47/abstract/4/"
+            },
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/6/",
+                "image-color":"http://lorempixel.com/232/47/abstract/6/" 
+            },
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/7/",
+                "image-color":"http://lorempixel.com/232/47/abstract/7/" 
+            },
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/8/",
+                "image-color":"http://lorempixel.com/232/47/abstract/8/"     
+            },
+            {
+                "image-gray":"http://lorempixel.com/g/232/47/abstract/4/",
+                "image-color":"http://lorempixel.com/232/47/abstract/4/"
+            }
+        ]
+    },
+    "stories": {
+        "carousel-title":"Spark Stories",
+        "carousel-title-link":"#",
+        "carousel-slides":[
+            {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/5/",
+                "image-color":"http://lorempixel.com/232/162/nature/5/"  
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/1/",
+                "image-color":"http://lorempixel.com/232/162/nature/1/"
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/2/",
+                "image-color":"http://lorempixel.com/232/162/nature/2/" 
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/3/",
+                "image-color":"http://lorempixel.com/232/162/nature/3/" 
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/4/",
+                "image-color":"http://lorempixel.com/232/162/nature/4/"
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/6/",
+                "image-color":"http://lorempixel.com/232/162/nature/6/" 
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/7/",
+                "image-color":"http://lorempixel.com/232/162/nature/7/" 
+            },
+             {
+                "text":"Is alias et faces dis modit voluptatur autescia dolo explis que possi volutatemped et lamet et hiciam nonserasn",
+                "image-gray":"http://lorempixel.com/g/232/162/nature/8/",
+                "image-color":"http://lorempixel.com/232/162/nature/8/"     
+            }
+        ]
+    }
+}

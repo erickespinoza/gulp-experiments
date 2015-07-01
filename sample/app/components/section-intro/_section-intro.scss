@@ -1,0 +1,9 @@
+.section-intro {
+    margin-bottom: $pad*1.5;
+
+    &__overview {
+        max-width: 48em;
+        margin-top: $pad;
+    }
+
+}

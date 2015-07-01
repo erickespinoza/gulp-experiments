@@ -1,0 +1,17 @@
+<div class="feature-4up row" data-action="feature4up">
+
+    <h3 class="feature-4up__heading">{{ title }}</h3>
+
+    {{#each tiles }}
+    <div class="feature-slot">
+
+        <a href="{{ url }}" class="feature-tile" title="feature slot {{@index}}">
+            <img class="feature-tile__img" src="{{ img }}" />
+            {{#if title }}<h4 class="feature-tile__subtitle">{{ title }}</h4>{{/if}}
+            <p class="feature-tile__copy">{{ copy }}&nbsp;<span class="feature-tile__icon"></span></p>
+        </a>
+
+    </div>
+    {{/each}}
+
+</div>

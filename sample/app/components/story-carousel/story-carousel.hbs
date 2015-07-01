@@ -1,0 +1,21 @@
+<div class="story-carousel row {{#if variant}}{{#each variant}}story-carousel--{{ this }} {{/each}}{{/if}}" data-action="storyCarousel">
+	<h3 class="story-carousel__headline col-xs-12"><a href="{{carousel-title-link}}">{{carousel-title}}</a></h3>
+	<div class="story-carousel__slider owl-carousel col-xs-12">
+		{{#each carousel-slides }}
+			<div class="item">
+				<a href="#" class="feature-tile" title="story carousel {{@index}}">
+					<img class="story-carousel__slider__img" src={{ image-color }} />
+					{{!-- 
+					<img class="story-carousel__slider__img story-carousel__slider__img--gray" src={{image-gray}} />
+					{{#if image-color}}
+						<img class="story-carousel__slider__img story-carousel__slider__img--color hidden" src={{image-color}} />
+					{{/if}}
+					--}}
+					{{#if text}}
+						<p class="story-carousel__slider__text">{{text}} <span class="feature-tile__icon"></span></p>
+					{{/if}}
+				</a>
+			</div>				
+		{{/each}}
+	</div>
+</div>

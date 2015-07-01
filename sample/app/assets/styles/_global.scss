@@ -1,0 +1,570 @@
+/*------------------------------------*\
+    GLOBAL/BASE STYLES
+\*------------------------------------*/
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+html {
+    box-sizing: border-box; // subtract padding from declared widths
+    font-size: 12px;
+}
+
+body {
+    @include font-body-light();
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: $pad;
+    ul,
+    ol {
+        margin-left: $pad;
+    }
+}
+
+dt {
+    margin-top: $pad;
+}
+
+a {
+    @include transition();
+    text-decoration: none;
+    font-weight: 400;
+    img {
+        @include transition();
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+        img {
+            filter: brightness(110%);
+        }
+    }
+}
+
+h1,.h1,h2,.h2,h3,.h3 {
+    @include font-display-light();
+}
+
+h3 {
+    color: $brand-light;
+    a {
+        color: $brand-light;
+        min-height: 48px;
+        display: inline-block;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    [class^='icon-'] {
+        font-size: 2em;
+        padding-right: 4px;
+        //padding-bottom: 0.25em;
+        display: inline-block;
+        float: left;
+    }
+
+    p {
+        display: inline-block;
+        max-width: calc(100% - 52px);
+        margin-bottom: 0;
+        line-height: 48px;
+    }
+}
+
+h5 {
+    @include font-body-bold();
+    color: $color-text;
+}
+
+p {
+    margin-bottom: 1em;
+
+    a[href*="//"]:not([href*="baxter.com"]),
+    a[href$=".pdf"] {
+        &:after {
+            @include transition(top);
+            font-family: "icomoon";
+            position: relative;
+            top: -3px;
+            padding-left: 3px;
+            padding-right: 1px;
+        }
+        &:hover {
+            text-decoration: none;
+            &:after {
+                top: 0;
+            }
+        }
+    }
+
+    // External links
+    a[href*="//"]:not([href*="baxter.com"]):after {
+        content: "\e61a";
+    }
+    // PDF links
+    a[href$=".pdf"]:after {
+        content: "\e619";
+    }
+}
+
+/* ----- Global/Utility Classes ----- */
+
+.page-headings {
+    h1 {
+        @include font-display-light();
+        font-size: $heading-size-m;
+        color: $brand-light;
+        margin: 0 0 0.25em;
+    }
+
+    h2 {
+        @include font-display-light();
+        color: $brand-light;
+        font-size: $body-copy-size-l;
+        margin: 1em 0;
+        &.grey {
+            color: $brand-grey;
+            margin-top: 0.5em;
+        }
+    }
+    @include respond-to($tablet) {
+        h1 {
+            font-size: $heading-size-m;
+        }
+
+        h2 {
+            font-size: $heading-size-xs;
+            margin-top: 0.25em;
+            &.grey {
+                margin-top: 0.25em;
+            }
+        }
+    }
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.list-styled,
+.list-styled li ul {
+    margin: 0.5em 0 1em;
+    padding: 0 0 0 1.25em;
+    list-style: none;
+    li {
+        margin: 0 0 0.5em;
+        position: relative;
+        max-width: 40em;
+        &:before {
+            content: "●";
+            position: absolute;
+            top: 0.25em;
+            left: -1.5em;
+            color: $brand-light;
+            font-size: 0.75em;
+        }
+        ul {
+            li {
+                font-size: 0.85em;
+                &:before {
+                    color: $brand-grey;
+                }
+            }
+        }
+    }
+}
+
+.list-carets {
+    @extend .list-unstyled;
+    li {
+        @include font-display();
+        @extend .icon-arrow-nav-right;
+        display: block;
+        font-size: $body-copy-size-s;
+        padding: $pad/3 0;
+        &:before {
+            @extend .fonticon;
+            padding-right: 2px;
+            font-size: 0.75em;
+        }
+        a {
+            @include font-display();
+            display: inline-block;
+            width: auto;
+            margin: 0 auto;
+            color: $brand-grey;
+            
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $brand-dark;
+            }
+        }
+        ul {
+            padding: 0 0 0 $pad;
+            margin: $pad/3 0 0;
+        }
+    }
+}
+
+.jump-to-links {
+    margin: $pad*1.5 0;
+    h3 {
+        @include font-body-bold();
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: $brand-grey;
+    }
+    li {
+        width: auto;
+        display: inline-block;
+        margin-right: $pad;
+        font-size: 1.2rem;
+    }
+}
+
+.back-to-top {
+    color: $brand-grey;
+    margin: 0 0 $pad*1.5;
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+@include respond-to($screen-md-min) {
+    .half-left {
+        width: 45%;
+        margin-right: 5% !important;
+        float: left;
+    }
+
+    .half-right {
+        width: 45%;
+        margin-left: 5% !important;
+        float: right;
+    }
+
+    .onethird-left {
+        width: 30%;
+        margin-right: 3% !important;
+        float: left;
+    }
+
+    .onethird-right {
+        width: 30%;
+        margin-left: 3% !important;
+        float: right;
+    }
+}
+
+.basic-centered {
+    margin: $pad*4 0;
+    padding: 0 $pad;
+    color: $brand-grey;
+    h1 {
+        @include font-display-light;
+        font-size: $heading-size-m;
+        color: $brand-light;
+    }
+    .list-heading {
+        @include font-body-bold();
+        margin-top: $pad*2;
+        font-size: $body-copy-size-m;
+    }
+    @include respond-to($screen-md-min) {
+         margin: $pad*5;
+         text-align: center;
+         h1 {
+            font-size: $heading-size-l;
+         }
+    }
+    @include respond-to($screen-lg-min) {
+        h1 {
+            font-size: $heading-size-xl;
+         }
+    }
+}
+
+.hide-mobile {
+    display: none !important;
+    @include respond-to($desktop){
+        display: block !important;
+    }
+}
+
+.hide-desktop {
+    display: block;
+    @include respond-to($desktop){
+        display: none!important;
+    }
+}
+
+.hide-text {
+    font-size: 0;
+}
+
+.page-wrapper {
+    margin: (1.5*$pad) 0;
+    @include flexbox();
+    @include flex-flow(column);
+    @include respond-to($screen-md-min) {
+        margin: $pad*2 0;
+        @include flex-flow(row wrap);
+    }
+}
+
+.page-sidebar {
+    @extend .col-xs-12;
+    @extend .col-md-3;
+    @include order(1);
+    @include respond-to($screen-md-min) {
+        @include order(1);
+    }
+}
+
+.page-main {
+    @extend .col-xs-12;
+    @extend .col-md-9;
+    @include order(2);
+    @include respond-to($screen-md-min) {
+        @include order(1);
+    }
+}
+
+.page-main-minimal {
+    @extend .col-xs-12;
+    @extend .col-md-12;
+    @include order(1);
+    @include respond-to($screen-md-min) {
+        @include order(1);
+    }
+}
+
+.image-container {
+    margin: $pad 0;
+    img {
+        max-width: 100%;
+    }
+}
+
+.caption {
+    @include font-body-bold();
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0 $pad;
+}
+
+.table {
+    tr {
+        &:nth-child(odd) {
+            background-color: rgba($brand-light, 0.05);
+        }
+    }
+    thead {
+        tr {
+            &:nth-child(odd) {
+                background: none;
+            }
+        }
+    }
+    // overspecification below due to overriding Bootstrap
+    > thead > tr > th {
+        border-bottom-color: $brand-dark;
+    }
+    > tbody > tr > td {
+        border-top-color: rgba($brand-dark,0.1);
+    }
+}
+
+// overspecificity is due to Bootstrap
+.table {
+    font-size: $body-copy-size-s;
+    border: 2px solid #ccc;
+    background-color: $brand-white;
+    color: #666;
+
+    > thead > tr > th, 
+    > thead > tr > td, 
+    > tbody > tr > th, 
+    > tbody > tr > td, 
+    > tfoot > tr > th, 
+    > tfoot > tr > td {
+        border-top: 0;
+    }
+    > tfoot > tr {
+        border-top: 1px solid #ccc;
+        > td {
+            font-size: .8em;
+        }
+    }
+    tbody tr:nth-child(odd) {
+        background-color: rgba($brand-black, .1);
+        color: #444;
+    }
+    .table-row--highlight {
+        background-color: #888 !important;
+        color: $brand-white !important;
+    }
+   
+    &.table--alt {
+        tbody tr:nth-child(odd),
+        tbody tr:nth-child(even) {
+            @include respond-to($screen-sm-min) {
+                background: none;
+            }
+        }
+        @include respond-to($screen-xs-max, max) {
+            tbody tr:nth-child(4n-2) {
+                background-color: #ddd !important;
+            }
+        }
+    }
+    .table-footer--right {
+        margin-top: $pad/2;
+        display: block;
+        @include respond-to($screen-sm-min) {
+            margin-top: 0;
+            float: right;
+        }
+    }
+    @include respond-to($screen-xs-max, max) {
+        th {
+            display: none;
+        }
+        tr {
+            display: block;
+        }
+        td {
+            display: block;
+            width: 100%;
+            border-bottom: 1px dotted rgba(0,0,0,0.15);
+            margin: 0;
+            padding: 10px 20px !important;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .cell-heading {
+            @include font-body-bold();
+            text-transform: uppercase;
+            font-size: $body-copy-size-xs;
+            display: block;
+            margin-bottom: 5px;
+            position: relative;
+            left: -10px;
+        }
+    }
+}
+
+
+tcaption {
+    font-size: $heading-size-s;
+    color: $brand-grey-light;
+    display: block;
+    margin: $pad 0 $pad/2;
+}
+
+.arrow-link {
+    color: $color-text;
+    &:after {
+        @extend .fonticon;
+        @include transition();
+
+        // @extend .icon-arrow-circle; // uses :before
+        content: "\e60d";
+
+        color: $brand-grey-light;
+        font-size: $font-size-base;
+        position: relative;
+        top: 0.1em;
+        padding-left: 4px;
+    }
+    &:hover,
+    a:hover & {
+        color: $color-text;
+        text-decoration: none;
+        &:after {
+            color: $brand-light;
+        }
+    }
+}
+
+.heading-sidebar {
+    @include font-display-light();
+    font-size: $heading-size-s;
+    color: $brand-dark;
+    margin: 0 0 $pad/2;
+    display: block;
+    &:hover,
+    &:focus {
+        color: $brand-dark;
+        text-decoration: none;
+    }
+}
+
+
+/* ----- Layouts ----- */
+
+// constrain all site content to our max content width
+.site-wrapper {
+    max-width: $content-max-width;
+    margin: 0 auto;
+    > .container-fluid > .row:not(.full-bleed) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include respond-to($screen-md-min) {
+        padding: 0 $pad;
+    }
+}
+
+.container-fluid {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+// minimal nav for minimal layout
+.minimal-nav {
+    @extend .container-fluid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    &__backlink {
+        float: right;
+    }
+}
+
+/*------- diverdes --------*/
+
+.line-divider {
+    display: block;
+    height: 1px;
+    background: $brand-grey-light;
+    margin-bottom: $pad;
+}

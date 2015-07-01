@@ -1,0 +1,152 @@
+/*------------------------------------*\
+    ICON FONT STYLES
+\*------------------------------------*/
+
+/* Custom icon font via Icomoon */
+
+/* To update this font:
+    - Go to the Icomoon App (http://icomoon.io), upload the selection.json 
+        file from our /fonts directory, and update as needed.
+    - Replace the font files AND selection.json in our /fonts/ directory 
+        with the new versions. 
+    - Save any new .svg files to our images/svg directory, 
+    - Add additional icon classes individually below (at the bottom) from the provided style.css file.
+    - Then add a new icon example to the icon-library.hbs page. */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-kgtg1s');
+    src:url('fonts/icomoon.eot?#iefix-kgtg1s') format('embedded-opentype'),
+        url('fonts/icomoon.woff?-kgtg1s') format('woff'),
+        url('fonts/icomoon.ttf?-kgtg1s') format('truetype'),
+        url('fonts/icomoon.svg?-kgtg1s#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .fonticon {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pdf-link:before {
+    content: "\e619";
+}
+
+.icon-external-link:before {
+    content: "\e61a";
+}
+
+.icon-search-icon:before {
+    content: "\e618";
+}
+
+.icon-file-empty:before {
+    content: "\e924";
+}
+
+.icon-dropdown-updown-arrows-01:before {
+    content: "\e617";
+}
+
+.icon-Baxalta_icon_world:before {
+    content: "\e613";
+}
+
+.icon-Baxalta_icon_teams:before {
+    content: "\e614";
+}
+
+.icon-Baxalta_icon_quest:before {
+    content: "\e615";
+}
+
+.icon-Baxalta_icon_passion:before {
+    content: "\e616";
+}
+
+.icon-arrow-nav-right:before {
+    content: "\e611";
+}
+
+.icon-arrow-nav-left:before {
+    content: "\e612";
+}
+
+.icon-baxalta-logo:before {
+    content: "\e60f";
+}
+
+.icon-caret-right:before {
+    content: "\e60e";
+}
+
+.icon-facebook:before {
+    content: "\e600";
+}
+
+.icon-minus:before {
+    content: "\e601";
+}
+
+.icon-plus:before {
+    content: "\e602";
+}
+
+.icon-youtube:before {
+    content: "\e603";
+}
+
+.icon-email:before {
+    content: "\e604";
+}
+
+.icon-linkedin:before {
+    content: "\e605";
+}
+
+.icon-play:before {
+    content: "\e606";
+}
+
+.icon-rss:before {
+    content: "\e607";
+}
+
+.icon-share-link:before {
+    content: "\e608";
+}
+
+.icon-twitter:before {
+    content: "\e609";
+}
+
+.icon-baxter-logo:before {
+    content: "\e60a";
+}
+
+.icon-menu:before {
+    content: "\e60b";
+}
+
+.icon-spark:before {
+    content: "\e60c";
+}
+
+.icon-arrow-circle:before {
+    content: "\e60d";
+}
+
+.icon-print-link:before {
+    content: "\e610";
+}
+

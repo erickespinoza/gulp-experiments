@@ -1,0 +1,32 @@
+{
+	"items": [
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"copy": "[Albumin (Human)], USP, 5% Solution",
+			"title": "BUMINATE 5%"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"copy": "[Albumin (Human)], USP, 25% Solution",
+			"title": "BUMINATE 25%"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"copy": "[Albumin (Human)], USP, 5% Solution",
+			"title": "FLEXBUMIN 5%",
+			"webaddr": "www.flexbumin.com"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"copy": "[Albumin (Human)], USP, 25% Solution",
+			"title": "FLEXBUMIN 25%",
+			"webaddr": "www.flexbumin.com"
+		},
+		{
+			"url": "http://www.baxter.com/press_room/press_releases/bioscience_headlines.html",
+			"copy": "[Protein C Concentrate (Human)]",
+			"title": "CEPROTIN",
+			"webaddr": "www.ceprotin.com"
+		}
+	]
+}

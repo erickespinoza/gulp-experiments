@@ -1,0 +1,25 @@
+<div class="section-intro" data-action-name="section-intro">
+
+	<hgroup class="page-headings">
+		<h1>{{ title }}</h1>
+		{{#if subtitle }}<h2 class="grey">{{ subtitle }}</h2>{{/if}}
+	</hgroup>
+
+	<div class="section-intro__overview">
+
+		{{#if copy }}
+
+			{{{ copy }}}
+
+		{{ else }}
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate facere ullam error expedita, delectus reprehenderit temporibus tempora officia magnam nulla rerum labore dignissimos commodi nihil placeat accusamus? Quis, cumque. Fugiat dolorum at natus excepturi officiis nulla officia. Ut voluptas, nobis facilis repudiandae numquam cupiditate iste quidem omnis fugit, delectus, accusamus provident, vel odio porro totam aliquid expedita incidunt sequi dolorum sint magnam sapiente!</p>
+		{{/if}}
+
+		{{#if link }}
+
+			<p><a href="{{ link.url }}">{{ link.title }}</a></p>
+
+		{{/if}}
+	</div>
+
+</div>

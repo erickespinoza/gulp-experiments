@@ -1,0 +1,33 @@
+/* ----- Result link component styles ----- */
+
+.result-link {
+	margin-top: $pad;
+	display: block;
+	overflow: hidden;
+	text-decoration: none !important;
+
+	&:focus span, 
+	&:hover span {
+		color: $brand-light;
+	}
+	&:focus &__date,
+	&:hover &__date {
+		color: $brand-dark;
+	}
+	&:focus &__copy,
+	&:hover &__copy {
+		color: $brand-light;
+	}
+
+	&__date {
+		margin: 0 0 0.5em;
+		display: block;
+		color: $brand-grey;
+		font-size: $body-copy-size-s;
+	}
+
+	&__copy {
+		color: $brand-dark;
+		max-width: 45em;
+	}
+}

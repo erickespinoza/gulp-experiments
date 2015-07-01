@@ -1,0 +1,26 @@
+{
+    "passion": {
+        "heading": "Passion for Improving Lives",
+        "icon": "icon-Baxalta_icon_passion",
+        "url": "#"
+    },
+    "quest": {
+        "heading": "Quest for Innovation",
+        "icon": "icon-Baxalta_icon_quest",
+        "url": "#"
+    },
+    "teams": {
+        "heading": "Inspired Teams",
+        "icon": "icon-Baxalta_icon_teams",
+        "url": "#"
+    },
+    "world": {
+        "heading": "Engaged with the World Around Us",
+        "icon": "icon-Baxalta_icon_world",
+        "url": "#"
+    },
+    "nolink": {
+        "heading": "This one has no link",
+        "icon": "icon-Baxalta_icon_world"
+    }
+}

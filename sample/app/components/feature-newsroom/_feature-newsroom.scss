@@ -1,0 +1,62 @@
+/* ----- Feature newsroom component styles ----- */
+
+.feature-newsroom {
+	background-color: $brand-grey-background;
+	margin-bottom: $pad;
+	margin: 0 -1*($pad) $pad;
+	padding: 0 $pad;
+
+	&__title {
+		a:hover {
+			text-decoration: none;
+			.feature-newsroom__title__icon {
+				color: $brand-light;
+			}
+		}
+		&__icon {
+			@include transition();
+			font-size: $body-copy-size;
+            background-color: $brand-white;
+            color: $brand-grey-light;
+            border-radius: $body-copy-size;
+            padding: $body-copy-size/2;
+            margin-left: 5px;
+		}
+		
+	}
+
+	&__tile { 
+		margin-bottom: $pad*2;
+		@include flexbox();
+		@include flex-flow(row);
+		&:hover {
+			.feature-newsroom__tile__image {
+				filter: brightness(115%);
+			}
+		}
+
+		@include respond-to($screen-xs-max, max) {
+            border-top: 1px solid #ddd;
+            margin-bottom: $pad;
+		}
+
+		&__image {
+			@include transition();
+			margin-right: $pad/2;
+			align-self: flex-start;
+		}
+
+		&__copy {
+			@include flex(1);
+		}
+
+		&__date {
+			@include font-body-bold();
+			color: $color-text;
+			margin-bottom: $pad/2;
+			@include respond-to($screen-xs-max, max) {
+	            margin-bottom: 0.25em;
+			}
+		}
+	}
+}

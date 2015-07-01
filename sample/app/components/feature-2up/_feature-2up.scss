@@ -1,0 +1,75 @@
+/* ----- Feature 2up component styles ----- */
+
+.feature-2up {
+    background-color: $brand-white;
+    padding-bottom: $pad;
+    .feature-slot {
+        @extend .col-xs-12;
+        @extend .col-sm-6;
+    }
+    @include respond-to($screen-md-min) {
+        position: relative;
+        z-index: 2;
+        padding: 0 $pad/2 $pad; 
+    }
+}
+
+.feature-tile {
+    @include transition();
+    padding: $pad/1.5 0 0;
+    display: block;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        .feature-tile__title {
+            color: $link-hover-color;
+        }
+        .feature-tile__subtitle {
+            // color: $brand-dark;
+        }
+        .feature-tile__img {
+            filter: brightness(110%);
+        }
+        .feature-tile__icon {
+            color: $brand-light;
+        }
+    }
+    &__title {
+        @include gradient-light-blue();
+        @include transition();
+        color: $brand-light;
+        margin: 0 (-2*$pad) 0.5em;
+        padding: (1.5*$pad) (2*$pad) 0;
+
+        @include respond-to($tablet){
+            background: none;
+            margin: 0 0 0.5em;
+            padding: 0;
+        }
+    }
+    &__subtitle {
+        @include transition();
+        margin: 0 0 0.25em;
+    }
+    &__img {
+        @include transition();
+        max-width: 100%;
+        margin: 0 0 $pad/1.5;
+    }
+    &__copy {
+        font-size: $font-size-small;
+        color: $color-text;
+        br {
+            display: none;
+        }
+    }
+    &__icon {
+        @extend .fonticon;
+        @extend .icon-arrow-circle;
+        @include transition();
+        color: $brand-grey-light;
+        font-size: $font-size-base;
+        position: relative;
+        top: 2px;
+    }
+}

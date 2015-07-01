@@ -1,0 +1,35 @@
+/* ----- IE fixes ----- */
+
+
+.lte-ie9 {
+
+	.masthead {
+		.IE-warn {
+			display: block;
+			margin-bottom: 60px;
+		}
+	}
+	
+	.primary-nav .utility-nav {
+		position: absolute;
+		right: 0px;
+	}
+	
+	.left {
+		margin-top: 40px;
+		}
+		
+	ul.main-nav {
+		margin-top: 40px;
+	}
+	
+	.footer__section {
+		float: left;
+	}
+	
+	.footer__gray-border {
+	  height: 60px;
+	  clear: left;
+	}
+
+}

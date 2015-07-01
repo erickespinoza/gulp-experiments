@@ -1,0 +1,35 @@
+/* ----- Page breadcrumb component styles ----- */
+
+.page-breadcrumb {
+    margin: $pad/2 0 $pad 0;
+    padding: $pad/2 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    color: $brand-grey-light;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        font-size: $body-copy-size-m;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        &:before {
+            content: "/";
+            padding: 0 4px 0 2px;
+            color: $brand-grey-light;
+        }
+        &:first-child {
+            &:before {
+                content: "";
+                padding: 0;
+            }
+        }
+    }
+    a {
+        @include font-body-light();
+    }
+    @include respond-to($screen-md-min) {
+        display: none;
+    }
+}

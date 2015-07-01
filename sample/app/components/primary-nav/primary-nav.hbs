@@ -1,0 +1,89 @@
+<div class="primary-nav" data-action="primaryNav">
+	<div class="mobile-menu-activer hide-desktop">
+		{{#if logo}}
+		{{!-- The idea of make an if with the logo.href, is the same to not add anchor before the image, only take car fo the not add the right class when there is no anchor --}}
+		{{#if logo.href}}<a class="left hide-text" href={{logo.href}} title={{logo.title}}>
+			{{logo.title}}{{/if}}
+			<img class="logo {{#if logo.href}}right{{/if}}" src={{logo.img.source}} alt={{logo.img.alt}}>
+		{{#if logo.href}}</a>{{/if}}
+		{{/if}}
+		<a class="menu-logo right hide-text" href="#">Menu<span></span></a>
+	</div>
+	<div class="nav-menu-wrapper">	
+		<div class="utilities-container">
+			{{#if utilities}}
+			<ul class="utility-nav">
+			{{#each utilities}}
+				<li><a href={{href}} title="{{title}}">{{#if flag}}<img class="flag" src={{flag.source}} alt={{flag.alt}}>{{/if}}{{title}}</a></li>
+			{{/each}}
+				<li class="hide-mobile">
+					<form action="search.html" method="GET" name="searchForm" class="searchForm desktop">
+						<input type="text" placeholder="Search this website" name="q">
+						<input type="submit" value=" ">
+						<div class="searchIcon">&#58904;</div>
+					</form>
+				</li>
+			</ul>
+			{{/if}}
+			<div class="main-nav-wrapper">
+				<div class="flat-wrapper" role="navigation" aria-label="Main menu">
+					{{#if logo}}
+					{{!-- The idea of make an if with the logo.href, is the same to not add anchor before the image, only take car fo the not add the right class when there is no anchor --}}
+					{{#if logo.href}}<a class="left hide-mobile hide-text" href={{logo.href}} title={{logo.title}}>
+						{{logo.title}}{{/if}}
+						<img class="logo-link hide-mobile {{#if logo.href}}right{{/if}}" src={{logo.img.source}} alt={{logo.img.alt}}>
+					{{#if logo.href}}</a>{{/if}}
+					{{/if}}
+					{{#if main-nav}}
+					<ul id="nav" class="main-nav right" role="menubar">
+						<li class="hide-desktop">
+							<form action="search.html" method="GET" name="searchForm" class="searchForm mobile">
+								<input type="text" placeholder="Search this website" name="q">
+								<input type="submit" value=" ">
+								<div class="searchIcon">&#58904;</div>
+							</form>
+						</li>
+						{{#each main-nav}}
+						<li class="dropdown">
+							<a class="dropdown toggle activer" data-toggle="dropdown" data-activer="{{id}}" href="{{href}}" title="{{title}}" role="menuitem" tabindex="0" aria-haspopup="true"><span class="icon-plus hide-desktop"></span>{{title}}</a>
+							<div class="dropdown-menu" >
+								<a href="{{href}}" title="{{title}}" class="dropdown-menu-header">
+									 {{title}}
+								</a>
+								{{#if sub-menu}}
+								<ul role="menu" aria-hidden="true">
+									{{#each sub-menu}}
+									<li>
+										<a href="{{href}}" title="{{title}}">{{title}}</a>
+									</li>
+									{{/each}}
+								</ul>
+								{{/if}}	
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+				</div>
+			</div>
+			{{#each main-nav}}
+			<div id={{id}} class="dropdown-menu-desktop" tabindex="-1" aria-haspopup="true">
+				<div class="dropdown-menu-desktop--container">
+					<a href="{{href}}" title="{{title}}" class="dropdown-menu-header">
+						{{title}}
+					</a>
+					{{#if sub-menu}}
+					<ul role="menu" aria-hidden="true">
+						{{#each sub-menu}}
+						<li role="menuitem" tabindex="-1">
+							<a href="{{href}}" title="{{title}}">{{title}}</a>
+						</li>
+						{{/each}}
+					</ul>
+					{{/if}}		
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

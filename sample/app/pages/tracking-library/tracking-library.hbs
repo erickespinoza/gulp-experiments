@@ -1,0 +1,139 @@
+---
+title: Tracking Library
+slug: tracking-library
+list: reference
+layout: minimal
+---
+
+<div class="styleguide component-library container-fluid" data-action="componentLibrary">
+    <h1 class="h1">Tracking Library</h1>
+
+    <p class="lead">Tracking library documentation, see demos below:
+        <br/>
+        <small>(analytics tool will be required for test), library was tested with <a href="http://omnibug.rosssimpson.com/">omnibug</a>
+        </small>
+    </p>
+    <h2>tracking.js</h2>
+    <p>Root file: <strong>app/assets/scripts/tracking.js</strong>
+       <br/>
+       Json file: <strong>app/assets/json/tracking.json</strong> 
+    </p>
+    <p>tracking js library works with <a href="https://www.webtrends.com/products-solutions/analytics/">webtrends analytics</a></p>
+
+    <h2 class="styleguide__heading2">Global tracking</h2>
+    <p>Defining global tracking is easy from the <strong>tracking.json</strong> file in the [global] section.
+    example:
+    <p>
+    <pre>
+        ".flat-wrapper > a": {
+            "WT": {
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_HomeButton",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        }
+    </pre>
+    <ul>
+        <li><strong>.flat-wrapper > a</strong>: Key selector for the specific links where you will fire the webtrends tracking</li>
+        <li><strong>WT</strong>: All global tracking configurations must be declared in WT.</li>
+    </ul>
+    <p><strong>Note</strong>: if you want to replace some text in your tracking values with the specifc link name, you can use the <strong>[text]</strong> parameter.</p>
+
+    <h2 class="styleguide__heading2">Custom tracking</h2>
+    <p>if you scroll down in the <strong>tracking.json</strong> file, you will find a <strong>[custom]</strong> section. Custom tracking can be fired using their owns id's
+    </p>
+    <pre>
+        {
+            "id": "track-000001",
+            "WT": {
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        }
+    </pre>
+    <h3>How does it work?</h3>
+    
+    <div>You can add in your html links the <strong>data-track-me="<i>id</i>"</strong>
+        <br>
+        <textarea class="textarea">
+            <a href="/contact-us.html" data-track-me="track-000001">test link 1</a>
+        </textarea>
+        <br>
+        <a href="/contact-us.html" data-track-me="track-000001">test link 1</a>
+        <br><br>
+        You can also fire many tracking id's as you want (always separate your id's using a white space)
+        <textarea class="textarea">
+        <a href="/contact-us.html" data-track-me="track-000001 track-000002">test link 2</a>
+        </textarea>
+        <br>
+        <a href="/contact-us.html" data-track-me="track-000001 track-000002">test link 2</a>
+        <br><br>
+    </div>
+    <div>
+        If you need to fire something in your JS, you can use the global function: <strong>tracking.fire(id)</strong>
+        <br>
+        <textarea class="textarea">
+            tracking.fire('track-000001');
+        </textarea>
+    </div>
+
+
+    <h2 class="styleguide__heading2">Custom tracking using data attributes</h2>
+    Create a custom js with no js or json changes is possible using data attributes.
+    <br>
+    To start creating a new custom tracking in your html you need to add the attribute: <strong>data-track-me="new"</strong>
+    <br>
+    Once you add the <strong>data-track-me="new"</strong>, you just need to define the tracking arguments using also data attributes:
+    <br/><br/>
+    <ul>
+        <li>
+            <strong>data-track-ti="your WT.ti"</strong>
+        </li>
+        <li>
+            <strong>data-track-event="your WT.event"</strong>
+        </li>
+        <li>
+            <strong>data-track-eventId="your WT.dl"</strong>
+        </li>
+        <li>
+            <strong>data-track-cgn="your WT.cg_n"</strong>
+        </li>
+        <li>
+            <strong>data-track-cgs="your WT.cg_s"</strong>
+        </li>
+        <li>
+            <strong>data-track-searchTerm="your WT.mc_ev"</strong>
+        </li>
+
+    </ul>
+    <textarea class="textarea">
+        <a href="/contact-us.html" data-track-me="new" data-track-event="test event" data-track-cgn="test cgn" data-track-stopPropation="false">test link 3</a>
+    </textarea>
+    <br>
+    <a href="/contact-us.html" data-track-me="new" data-track-event="test event" data-track-cgn="test cgn" data-track-stopPropation="false">test link 3</a>
+
+    <h2 class="styleguide__heading2">What is stopPropagation?</h2>
+    <p>As you can see <strong>test link 3</strong> also has the <strong>data-track-stopPropation</strong> attribute set as "false"
+    <br/>
+    The stopPropagation is required for those cases you don't want your link to redirect to where the HREF attribute points. If you don't define a value for stopPropagation, the default state will be "false".
+    <br/>
+    You can also set the same property in your json file (if you don't it will assume a false value):
+    <pre>
+        ".main-nav a": {
+            "stopPropagation": true,
+            "WT": {
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        }
+    </pre>
+    </p>
+
+
+
+</div>

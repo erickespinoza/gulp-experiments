@@ -1,0 +1,7 @@
+/* ----- Bootstrap Overrides ----- */
+
+// See _vars.scss file for Bootstrap variable overrides
+
+.btn {
+    @include transition();
+}

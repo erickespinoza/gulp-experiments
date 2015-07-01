@@ -1,0 +1,76 @@
+/* ----- About us leadership element component styles ----- */
+
+.person-item {
+	
+	ul {
+	
+		@include columns-number(1);
+        @include columns-gap(0);
+        list-style: none;
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        
+        li {
+            font-size: $body-copy-size-l;
+            margin: 0 auto $pad*1.5 0;
+            min-height: 112px;
+            overflow: hidden;
+			
+			a {
+				text-decoration: none;
+                display: block;
+                
+                &:hover {
+                    h3 {
+                        color: $brand-dark;
+                    }
+                    img {
+                        filter: none;
+                    }
+                }
+			}
+
+			h3 { 
+				@include font-display-light();
+                @include transition();
+		        font-size: $heading-size-xxs;
+		        margin: $pad/2 0;
+		        color: $brand-light;
+			}
+
+			img {
+				float: left;
+				max-width: 112px;
+				margin-right: $pad;
+			}
+
+			p {	
+				font-weight: 200;
+				color: $color-text;
+				font-size: $body-copy-size-s;
+			}
+
+        }
+
+	}
+
+	&__icon {
+        @extend .fonticon;
+        @extend .icon-arrow-circle;
+        @include transition();
+        color: $brand-grey-light;
+        font-size: $font-size-base;
+        position: relative;
+        top: 2px;
+    }
+
+	@include respond-to($screen-sm-min) {
+            
+        &__icon {
+			display: none;
+        }
+
+    }
+
+}

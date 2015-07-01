@@ -1,0 +1,25 @@
+<div class="video-container {{#if variant}}{{ variant }}{{/if}}">
+	
+	{{#if title }}<h3>{{ title }}</h3>{{/if}}
+
+	<script src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+	<div class="video-container-slot" data-action="videoContainer">
+		<object id="myExperience4202640529001" class="BrightcoveExperience">
+			<param name="includeAPI" value="true" />
+		  	<param name="templateLoadHandler" value="BCLS.onTemplateLoad" />
+		  	<param name="templateReadyHandler" value="BCLS.onTemplateReady" />
+			<param name="bgcolor" value="#FFFFFF" />
+			<param name="width" value="480" />
+			<param name="height" value="270" />
+			<param name="playerID" value="4122396361001" />
+			<param name="playerKey" value="AQ~,AAABrLPpvnk,7Q4Wbq_wEtP7UbF0XqTWsbwM_bOMAorQ" />
+			<param name="isVid" value="true" />
+			<param name="isUI" value="true" />
+			<param name="dynamicStreaming" value="true" />
+			<param name="@videoPlayer" value="4202640529001" />
+		</object>
+	</div>
+
+	<script>brightcove.createExperiences();</script>
+	{{#if caption }}<p class="caption"><span class="icon-play"></span> {{ caption }}</p>{{/if}}
+</div>

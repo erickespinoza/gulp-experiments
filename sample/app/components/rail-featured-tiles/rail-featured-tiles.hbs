@@ -1,0 +1,11 @@
+<div class="rail-featured-tiles" data-action="railFeaturedTiles">
+	<h3 class="rail-featured-tiles__heading">{{header}}</h3>
+	{{#each tiles}}
+	<a class="rail-featured-tiles__element" href="{{href}}" title="{{text}}">
+		<img class="rail-featured-tiles__element__background" src="{{image}}" alt="">
+		<div class="rail-featured-tiles__element__content">
+			{{text}}&nbsp;<span class="icon-arrow-circle"></span>
+		</div>
+	</a> 
+	{{/each}}
+</div>

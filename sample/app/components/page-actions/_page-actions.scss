@@ -1,0 +1,50 @@
+/* ----- Page actions component styles ----- */
+
+.page-actions {
+    padding: $pad 0 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__item {
+        margin: 0 0 0.5em;
+        padding: 0;
+        display: inline-block;
+        &--print,
+        &--social,
+        &--email {
+            .stButton {
+                display: none !important;
+            }
+            @include respond-to($screen-xs-max, max) {
+                display: none;
+            }
+        }
+    }
+    a {
+        color: $brand-grey;
+        margin-right: $pad;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            .page-actions__text {
+                border-bottom: 1px solid #ddd;
+            }
+            [class^='icon-'] {
+                color: $brand-light;
+            }
+        }
+        [class^='icon-'] {
+            @extend .fonticon;
+            @include transition();
+            background-color: transparent;
+            border: 1px solid $brand-grey-light;
+            color: $brand-grey-light;
+            border-radius: 50%;
+            margin-right: 4px;
+            padding: 7px;
+            font-size: $body-copy-size-m;
+        }
+    }
+}

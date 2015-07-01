@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if lte IE 9]> <html class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{#if title }}{{ title }} | {{/if}}Baxalta</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {{> imports-head }}
+
+        {{> analytics }}
+
+        {{> favicons}}
+
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "379d0671-20b0-468a-9358-b78b7912700d", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    </head>
+    <body class="layout-default ">
+        {{> primary-nav primary-nav}}
+
+        <div class="site-wrapper">
+            <div class="container-fluid">
+
+                <div class="page-wrapper">
+
+                     <div class="page-sidebar">
+                        {{#is subnav true }}
+                            {{> secondary-nav }}
+                        {{/is}}
+
+                        {{#is featured true }}
+                            {{> rail-featured-tiles rail-featured-tiles }}
+                        {{/is}}
+                    </div>
+
+                    <div class="page-main">
+                        {% body %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    {{> imports-body }}
+
+    </body>
+</html>

@@ -1,0 +1,94 @@
+$color-ws-default: $brand-light;
+
+.windowshade-group {
+	padding-top: 1px;
+    margin: $pad*1.5 0;
+
+	.windowshade {
+		margin-top: -1px;
+	}
+}
+
+.windowshade {
+
+	&__title {
+		cursor: pointer;
+		display: block;
+		color: $color-ws-default;
+		border: 1px solid $color-ws-default;
+		padding: 10px $pad;
+		position: relative;
+
+		&:hover, &:active,{
+			text-decoration: none;
+			color: $color-ws-default;
+		}
+
+		&:focus {
+			color: $color-ws-default;
+		}
+
+	}
+
+	&__body {
+		border-left: 1px solid $color-ws-default;
+		border-bottom: 1px solid $color-ws-default;
+		border-right: 1px solid $color-ws-default;
+		padding: $pad;
+        overflow: hidden;
+	}
+
+	&__icon {
+		@extend .fonticon;
+		@extend .icon-plus;
+
+		bottom: 0;
+		height: 100%;
+		margin: auto;
+		padding: 1em $pad;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.is-active & {
+			@extend .icon-minus;
+		}
+	}
+
+	&--alt {
+		margin: $pad*2 0;
+		
+		.windowshade {
+			&__title {
+				padding: 0;
+				border: none;
+				font-size: $heading-size-xs;
+				margin: $pad 0 $pad/2;
+				&:hover,
+				&:focus {
+					color: $brand-dark;
+					text-decoration: none;
+				}
+			}
+			&__icon {
+				@include transition(opacity);
+				position: static;
+				font-size: $body-copy-size-m;
+				padding-left: $pad/2;
+				opacity: 1;
+			}
+			&__body {
+				padding: 0;
+				border: none;
+			}
+		}
+		&.is-active {
+			.windowshade {
+				&__icon {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+}

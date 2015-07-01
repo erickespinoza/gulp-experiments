@@ -1,0 +1,121 @@
+{
+	"logo":{
+		"img":{
+			"alt":"Baxalta",
+			"source":"../../assets/images/svg/Baxalta_logo.svg"
+
+		},
+		"title":"Baxalta",
+		"href":"homepage.html"
+	},
+	"utilities":[
+		{
+			"title":"US (change)",
+			"href":"#",
+			"flag":{
+				"source":"../../assets/images/svg/Flag_US.svg",
+				"alt":"US"
+			}
+		},{
+			"title":"For Investors",
+			"href":"#"
+		},{
+			"title":"Newsroom",
+			"href":"#"
+		},{
+			"title":"Careers",
+			"href":"#"
+		},{
+			"title":"Contact Us",
+			"href":"contact-us.html"
+		}
+	],
+	"main-nav":[
+		{
+			"title":"About Us",
+			"href":"landing-page.html",
+			"id":"about",
+			"sub-menu":[
+				{
+					"title":"Patient Promise",
+					"href":"#"
+				},{
+					"title":"Our Values",
+					"href":"#"
+				},{
+					"title":"Leadership",
+					"href":"#"
+				},{
+					"title":"Corporate Responsibility",
+					"href":"#"
+				},{
+					"title":"Governance",
+					"href":"#"
+				},{
+					"title":"Locations",
+					"href":"#"
+				}
+			]
+		},{
+			"title":"R & D",
+			"href":"landing-page.html",
+			"id":"rd",
+			"sub-menu":[
+				{
+					"title":"Research Areas",
+					"href":"#"
+				},{
+					"title":"Technology Platforms",
+					"href":"#"
+				},{
+					"title":"Pipeline",
+					"href":"#"
+				},{
+					"title":"Clinical Trials",
+					"href":"#"
+				},{
+					"title":"Cambrige Links",
+					"href":"#"
+				},{
+					"title":"Medical Grants",
+					"href":"#"
+				}
+			]
+		},{
+			"title":"Therapies",
+			"href":"landing-page.html",
+			"id":"the",
+			"sub-menu":[
+				{
+					"title":"Areas of Expertise",
+					"href":"#"
+				},{
+					"title":"Production Listing",
+					"href":"#"
+				},{
+					"title":"Medwatch Reporting",
+					"href":"#"
+				},{
+					"title":"Manufacturing",
+					"href":"#"
+				}
+			]
+		},{
+			"title":"Collaboration",
+			"href":"landing-page.html",
+			"id":"col",
+			"sub-menu":[
+				{
+					"title":"Partnership",
+					"href":"#"
+				},{
+					"title":"Baxalta Ventures",
+					"href":"#"
+				},{
+					"title":"Supplier Information",
+					"href":"#"
+				}
+			]
+		}
+	]
+}

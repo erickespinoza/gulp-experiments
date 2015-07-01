@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if lte IE 9]> <html class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{#if title }}{{ title }} | {{/if}}Baxalta</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {{> imports-head }}
+
+        {{> analytics }}
+
+        {{> favicons}}
+
+    </head>
+    <body class="layout-minimal">
+
+        <div class="minimal-nav">
+            <a class="minimal-nav__brand" href="index.html">
+                Baxalta
+            </a>
+            {{#isnt page.data.title 'Index'}}
+            <a class="minimal-nav__backlink" href="index.html">
+                Back to Index &gt;
+            </a>
+            {{/isnt}}
+        </div>
+
+        {% body %}
+
+        {{> imports-body }}
+
+    </body>
+</html>

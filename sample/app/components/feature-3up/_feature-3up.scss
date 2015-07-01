@@ -1,0 +1,36 @@
+/* ----- Feature 3up component styles ----- */
+
+.feature-3up {
+    @extend .row;
+    @include side-by-side-mobile();
+
+    .feature-slot {
+        @extend .col-xs-12;
+        @extend .col-sm-6;
+        @extend .col-md-4;
+    }
+
+    &__heading {
+        @extend .col-xs-12;
+        color: $brand-light;
+        margin: 0 0 $pad/2;
+        @include respond-to($tablet){
+            margin: 0;
+        }
+    }
+    &__heading2 {
+        @extend .col-xs-12;
+        @include font-body-bold();
+        font-size: $body-copy-size-m;
+        margin-top: $pad/4;
+        margin-bottom: 0;
+        color: $brand-grey;
+    }
+
+    @include respond-to($screen-sm-max, max) {
+        &__heading2 {
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+    }
+}

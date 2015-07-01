@@ -1,0 +1,46 @@
+---
+title: Country Selector
+slug: country-selector
+list: done
+layout: default
+---
+
+<div class="site-wrapper">
+    <div class="container-fluid">
+    	
+        <div class="country-selector" data-action-name="countrySelector">
+            <div class="container-fluid">
+
+                <hgroup class="page-headings">
+                    <h1>Select a Country</h1>
+                    <h2 class="grey">Web site by country/region and language</h2>
+                </hgroup>
+
+                <div class="image-container">
+                    <img src="http://placehold.it/1200x400/" />
+                    <p class="caption">Optional image component</p>
+                </div>
+
+                <div class="country-selector__options">
+                    <ul>
+                        {{#each country-selector}}
+                            <li><a href="{{ this.[1] }}" class="">{{ this.[0] }}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <div class="country-selector__content">
+                    <p>
+                        Baxalta is a leading biopharmaceutical company advancing innovative therapies in hematology, immunology and oncology. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit libero, praesentium expedita vitae cumque soluta harum commodi fuga illum quaerat cupiditate, sequi, labore incidunt ipsum rerum minima quod assumenda deleniti?
+                    </p>
+                    <ul>
+                        <li><a href="#">Investor Information</a></li>
+                        <li><a href="#">About Baxalta</a></li>             
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

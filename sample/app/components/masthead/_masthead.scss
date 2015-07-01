@@ -1,0 +1,171 @@
+.masthead {
+
+
+	$masthead-sm-max    : 480px;
+	$masthead-md-max    : 1025px;
+
+	@include respond-to($screen-md-min) {
+		margin-bottom: -40px;
+	}
+
+	@include respond-to($sub-content-max-width){ 
+		margin-bottom: -55px;
+	}
+
+
+	
+	&__headline {
+		padding: 0 $pad; 
+		max-width: $content-max-width;
+		margin: 0 auto;
+		width: 100%;
+		@include respond-to($screen-md-min) { 
+			padding: 4% $pad*2;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__title {
+		color: $brand-light;
+
+		@include respond-to($screen-md-min) {
+			@include font-display-light();
+			@include text-shadow();
+			color: $brand-white;
+			margin-bottom: 25px;
+			font-size: 58px;
+			line-height: 1.1;
+		}
+
+		br {
+			@include respond-to($screen-sm-min, $screen-md-min - 1) { 
+				display: none;
+			}
+		}
+	}
+
+	&__copy {
+		//color: $brand-light;
+		@include respond-to($screen-md-min) { 
+			@include font-display-light();
+			@include text-shadow();
+			color: $brand-white;
+			font-size: 18px;
+			margin-bottom: 1.5em;
+			max-width: 24em;
+		}
+	}
+
+	&__link {
+		color: $brand-light;
+		@include respond-to($screen-md-min) { 
+			color: $brand-white;
+		}
+		&:hover, &:target, &:focus {
+			text-decoration: none;
+		}
+		[class^="icon-"] {
+			padding-right: 5px;
+		}
+		&__text {
+			color: $brand-light;
+			font-size: 18px;
+
+			@include respond-to($screen-md-min) { 
+				@include text-shadow();
+				color: $brand-white;
+			}
+
+			&:hover { 
+				border-bottom: 1px solid $brand-white;
+			}
+		}
+	}
+
+	//OWL css overides
+
+	.owl-item {
+		-webkit-backface-visibility: inherit;
+	}
+
+	.owl-controls {
+		margin-top: 32%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+
+		@include respond-to($masthead-sm-max) {
+			margin-top: 34%;
+		}
+
+		@include respond-to($screen-md-min) { 
+			margin: 0 $pad*2 70px;
+			top: inherit;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: auto;
+		}
+		@include respond-to($content-max-width) {
+			max-width: $content-max-width - 200px;
+			width: 100%;
+			margin: 0 auto 90px;
+		}
+	}
+
+	.owl-dots {
+		overflow: auto;
+		margin: 0 auto;
+		width: 75px;
+		@include respond-to($screen-md-min) { 
+			width: 90px;
+			float: right;
+		}
+	}
+
+	.owl-dot {
+		background-color: rgba($brand-white, .05);
+		cursor: pointer;
+		border: 1px solid $brand-white;
+		border-radius: 50%;
+		float: left;
+		height: 10px;
+		margin: 0 7px;
+		width: 10px;
+
+		@include respond-to($screen-md-min) {
+			height: 13px;
+			margin: 0 8px;
+			width: 13px;
+		}
+
+		&.active {
+			background-color: $brand-white;
+		}
+	}
+	
+	.IE-warn {
+		background: red;
+		color: #ffffff;
+		font-size: 18px;
+		text-align: center;
+		display: none;
+		
+		p {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+		}		
+				
+	}
+	
+}
+
+
+
+
+

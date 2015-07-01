@@ -1,0 +1,44 @@
+{
+    "leadership": {
+        "tabs": [
+            {
+                "title": "Executive Officers",
+                "url": "#",
+                "active": true
+            },
+            {
+                "title": "Corporate Officers",
+                "url": "#"
+            },
+            {
+                "title": "Board of Directors",
+                "url": "#"
+            }
+        ]
+    },
+    "product-list": {
+        "tabs": [
+            {
+                "title": "All Marketed Products",
+                "url": "#"
+            },
+            {
+                "title": "Hematology",
+                "url": "#",
+                "active": true
+            },
+            {
+                "title": "Immunology",
+                "url": "#"
+            },
+            {
+                "title": "Critical Care",
+                "url": "#"
+            },
+            {
+                "title": "Pulmonology",
+                "url": "#"
+            }
+        ]
+    }
+}

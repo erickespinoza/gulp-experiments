@@ -1,0 +1,28 @@
+<div class="tab-controls" data-action="tabControls">
+	<div class="tab-controls__list">
+		<div id="01" class="tab-controls__list__wrapper">
+			{{#if tabs }}
+				{{#each tabs }}
+					<a href="{{ url }}" class="item tab-controls__list__tab 
+						{{#if active }}is-active{{/if}}">
+
+						<span class="tab-controls__list__text">{{ title }}</span>
+					</a>
+				{{/each}}
+			{{ else }}
+				<a href="#"class="item tab-controls__list__tab ">
+					<span class="tab-controls__list__text">All</span>
+				</a>
+				<a href="#"class="item tab-controls__list__tab ">
+					<span class="tab-controls__list__text">Corporate</span>
+				</a>
+				<a href="#"class="item tab-controls__list__tab is-active">
+					<span class="tab-controls__list__text">Financial</span>
+				</a>
+				<a href="#"class="item tab-controls__list__tab">
+					<span class="tab-controls__list__text">Product &amp; Pipeline</span>
+				</a>
+			{{/if}}
+		</div>
+	</div>
+</div>

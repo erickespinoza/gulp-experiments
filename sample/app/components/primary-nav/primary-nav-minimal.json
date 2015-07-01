@@ -1,0 +1,22 @@
+{
+	"logo":{
+		"img":{
+			"alt":"Baxalta",
+			"source":"assets/images/svg/Baxalta_logo.svg"
+		},
+		"title":"Baxalta"
+	},
+	"utilities":[
+		{
+			"title":"US (change)",
+			"href":"#",
+			"flag":{
+				"source":"assets/images/svg/Flag_US.svg",
+				"alt":"US"
+			}
+		},{
+			"title":"Contact Us",
+			"href":"contact-us.html"
+		}
+	]
+}

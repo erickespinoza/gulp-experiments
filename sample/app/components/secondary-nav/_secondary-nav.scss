@@ -1,0 +1,104 @@
+/* ----- Secondary nav component styles ----- */
+
+.secondary-nav {
+
+    &__trigger {
+        display: block;
+        margin: 0;
+        background-color: $brand-grey-light;
+        color: $brand-white;
+        padding: $pad/2 $pad/1.5;
+
+        [class^='icon-'] {
+            @include transition(transform);
+            float: right;
+            font-size: 1.25em;
+            position: relative;
+            top: 2px;
+            transform: rotate(90deg);
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $brand-white;
+        }
+
+        &:hover {
+            background-color: $brand-light;
+        }
+
+        @include respond-to($screen-md-min) {
+            display: none;
+        }
+
+        &--active {
+            background-color: $brand-light;
+
+            [class^='icon-'] {
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+	&__wrapper {
+		@include container();
+
+        @include respond-to($screen-sm-max, max) {
+            // margin-top: $pad;
+            // padding-top: $pad;
+            padding-left: 0;
+            padding-right: 0;
+            // border-top: 1px solid #ddd;
+        }
+	}
+	&__section {
+		float: left;
+		margin-bottom: $pad*2;
+		width: 100%;
+
+        @include respond-to($screen-sm-max, max) {
+            border: 1px solid #ddd;
+            padding: $pad/1.5 $pad*1.5;
+        }
+	}
+	&__heading {
+		@extend .heading-sidebar;
+	}
+	&__links {
+        padding: 0;
+        list-style: none;
+        li {
+        	margin: 0 0 0.75em;
+            position: relative;
+            padding-left: 10px;
+            &:before {
+                @extend .fonticon;
+                @extend .icon-caret-right;
+                font-size: 7px;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                color: $brand-grey;
+                font-weight: bold; 
+            }
+            &.is-active {
+                a {
+                    color: $brand-dark;
+                    text-decoration: none;
+                }
+            }
+        }
+        a {
+			color: #686868;
+		    &:hover {
+		        color: $brand-dark;
+		    }
+		    &:focus{
+		    	color: $brand-dark;
+		    	text-decoration: none;
+		    }
+	    }
+	}
+
+}

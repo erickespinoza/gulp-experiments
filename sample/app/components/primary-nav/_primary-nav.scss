@@ -1,0 +1,630 @@
+/* ----- Primary nav component styles ----- */
+
+.primary-nav {
+	margin-bottom: 48px;
+
+	a {
+		.logo {
+			margin: ($pad/2) 0 ($pad/2) ($pad);
+		}
+	}
+
+	.logo {
+		width: 102px;
+		// margin: ($pad/2) 0 ($pad/2) ($pad);
+		margin-left: $pad;
+		height: 100%; //fix for IE11
+	}
+
+	.logo-link {
+		width: 220px;
+		padding-bottom: 15px;
+		height: 100%; //fix for IE11
+	}
+
+	.flag {
+		background: $brand-white;
+		width: 18px;
+		margin: -2px 5px 0 0;
+	}
+
+	.menu-logo { 
+		cursor: pointer; 
+		padding: 8px 20px 14px 0px;
+		margin: 15px ($pad);
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
+		span, span:before, span:after {
+			@include transition();
+			cursor: pointer;
+			border-radius: 1px;
+			height: 2px;
+			width: 20px;
+			background: $brand-light;
+			position: absolute;
+			display: block;
+			content: '';
+		}
+		
+		span:before {
+		  	top: -5px;
+		}
+		
+		span:after {
+			bottom: -5px; 
+		}
+
+		&.active {
+			background: $brand-light;
+
+			span {
+				background-color: transparent;
+			}
+
+			span:before, span:after {
+				top: 2px;
+				background: $brand-white;
+			}
+			span:before {
+				transform: rotate(45deg);
+			}
+			span:after {
+				transform: rotate(-45deg);
+			}
+		}
+
+		&.active-android {
+			background: $brand-light;
+
+			span, span:before, span:after {
+				background-color: transparent;
+			}
+
+			span:before {
+				content:"X";
+				font-size: 18px;
+				top: -10px;
+				left: 4px;
+				color: $brand-white;
+			}
+		} 
+	}
+
+	.mobile-menu-activer {
+		overflow: hidden;
+		position: fixed;
+		height: 48px;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+		width: 100%;
+		background: $brand-white;
+		box-shadow: 0 12px 24px -4px mix($brand-light, $brand-blue-white, 5%);
+		-webkit-box-shadow: 0 12px 24px -4px mix($brand-light, $brand-blue-white, 5%);
+		-moz-box-shadow: 0 12px 24px -4px mix($brand-light, $brand-blue-white, 5%); 
+	}
+
+	.nav-menu-wrapper {
+		display: none;
+		position: fixed;
+		top: 48px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: calc(100% - 48px);
+		overflow-x: hidden;
+		overflow-y: scroll;
+		z-index: 4;
+		background: $brand-dark;
+		-webkit-backface-visibility: hidden; 
+
+		@include respond-to($desktop){
+			display: block!important;
+			position: relative;
+			top: 0;
+			background: none;
+			overflow: visible;
+			height: 120px;
+		}
+	}
+
+	.utilities-container {
+		@include flexbox();
+		@include flex-flow(column);
+		background: $brand-dark;
+
+		@include respond-to($desktop) {
+			@include flex-flow(row wrap);
+			justify-content: flex-end;
+			background: $brand-white;
+			position: relative;
+		}
+	}
+
+	.utility-nav {
+		@include order(3);
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			&:last-of-type {
+				a {
+					padding-right: 0;
+				}
+			}
+			@include respond-to($desktop) {
+				font-size: 13px;
+			}
+			a {
+				@include transition();
+				color: $brand-blue-white;
+				display: block;
+				padding: ($pad/4) (2.5*$pad);
+
+				&:hover, &:focus {
+					text-decoration: none;
+					background: rgba($brand-black, 0.1);
+				}
+
+				@include respond-to($desktop) {
+					color: $color-text;
+					padding: 15px 2px 3px 2px;
+					margin: 0 8px;
+					border-bottom: 2px solid transparent;
+
+					&:hover, &:focus {
+						background: none;
+						color: $brand-dark;
+						border-bottom: 2px solid $brand-dark;
+	
+					}
+
+					&:active {
+						color: $color-text;
+						border-bottom: 2px solid $color-text;
+					}
+				}
+			}
+
+			@include respond-to($desktop) {
+				float: left;
+			}	
+		}
+
+		/* Desktop Search */
+		.searchForm {	
+			position: relative;
+			margin: 9px 0 0 9px;
+			input {
+				float: right;
+				height: 30px;
+				line-height: 30px;
+				border: 1px solid $brand-grey;
+			    border-radius: 15px;
+				padding: 0 $pad/2;
+				&:focus {
+					outline: 0;
+				    box-shadow: 0 0 2px 2px $brand-blue-h3;
+				}
+			}
+			input[type="text"] {
+				width: 0px;
+				opacity: 0;
+				visibility: hidden;
+			}
+			input[type="submit"] {
+				position: absolute;
+				top: 3px;
+				right: 3px;
+				height: 24px;
+				width: 24px;
+				border: 0;
+				background: #eceeed;
+			}
+			.searchIcon {
+				display: block;
+				width: 24px;
+				height: 24px;
+				line-height: 25px;
+				text-align: center;
+				font-family: "icomoon";
+				font-weight: normal;
+				color: #000;
+				position: absolute;
+				top: 3px;
+				right: 3px;
+				pointer-events: none;
+				cursor: pointer;
+			}
+
+		}
+
+		@include respond-to($desktop) {
+			@include order(1);
+			margin-right: 30px;
+		}
+
+		@include respond-to($sub-content-max-width){
+			margin-right: calc((100% - 1120px)/2);
+		}
+	}
+
+	.main-nav-wrapper {
+		@include order(2);
+
+		@include respond-to($desktop) {
+			width: 100%;
+			box-shadow: 0 16px 24px mix($brand-light, $brand-blue-white, 5%);
+			position: relative;
+			z-index: 1;
+
+			&.no-shadow {
+				box-shadow: none;
+			}
+
+			.body-homepage & {
+				box-shadow: none;
+			}
+		}
+	}
+
+	.flat-wrapper {
+		width: 100%;
+
+		@include respond-to($desktop) {
+			padding: 0 40px;
+			max-width: $content-max-width;
+			margin: 0 auto;
+		}
+	}
+
+	.main-nav {
+		@include order(2);
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		/* Mobile Search */
+		.searchForm {	
+			position: relative;
+			padding: $pad/2 $pad;
+			input {
+				float: right;
+				height: 30px;
+				line-height: 30px;
+				border: 1px solid #00aaf0;
+				border-radius: 15px;
+				padding: 0 $pad/2;
+				&:focus {
+					outline: 0;
+				}
+			}
+			input[type="text"] {
+				margin-bottom: $pad/2;
+				width: 100%;
+				background: #0050b4;
+				color: #fff;
+				&::-webkit-input-placeholder { color: white; }
+				&:-moz-placeholder { color: white; }
+				&::-moz-placeholder { color: white; }
+				&:-ms-input-placeholder { color: white; }
+				&:focus {
+					background: #0047a2;
+				}
+			}
+			input[type="submit"] {
+				position: absolute;
+				top: $pad/2 + 3px;
+				right: $pad + 3px;
+				height: 24px;
+				width: 24px;
+				border: 0;
+				background: #00aaf0;
+			}
+			.searchIcon {
+				display: block;
+				width: 24px;
+				height: 24px;
+				line-height: 25px;
+				text-align: center;
+				font-family: "icomoon";
+				font-weight: normal;
+				color: #fff;
+				position: absolute;
+				top: $pad/2 + 3px;
+				right: $pad + 3px;
+				pointer-events: none;
+				cursor: pointer;
+			}
+
+		}
+
+		> li {
+			overflow: hidden;
+			> a {
+				@include transition();
+				padding: ($pad/4) (2.5*$pad);
+				color: $brand-white;
+				display: block;
+				font-size: 20px;
+				position: relative;
+
+				&:hover, &:focus {
+					text-decoration: none;
+					background: rgba($brand-black, 0.1);
+				}
+
+				[class^="icon-"], [class*=" icon-"] {
+					display: inline-block;
+					font-size: 8px;
+					border: 1px solid $brand-white;
+					border-radius: 8px;
+					padding: 4px;
+					position: absolute;
+					margin: auto 5px auto 0;
+					left: ($pad);
+					top: 0;
+					bottom: 0;
+					height: 18px;
+				}
+
+				@include respond-to($desktop) {
+					color: $brand-dark;
+					padding: 33px 15px 15px;
+					border-bottom: 3px solid transparent;
+
+					&:hover, &:focus {
+						background: none;
+						color: $brand-light;
+						border-bottom: 3px solid $brand-light;
+					}
+				}
+			}
+
+			&.open {
+				background: $brand-light;
+
+				> a {
+					> span {
+						&:before {
+							content:"\e601";
+						}
+					}
+
+					&:hover, &:focus {
+						background: $brand-light;
+					}
+
+					@include respond-to($desktop) {
+						color: $brand-dark;
+						border-bottom: 3px solid $brand-dark;
+
+						&:hover, &:focus {
+							background: none;
+							color: $brand-dark;
+							border-bottom: 3px solid $brand-dark;
+						}
+					}
+				}
+
+				@include respond-to($desktop) {
+					background: none;
+				}
+			}
+
+			&:last-child {
+				> a {
+					padding-right: 0;
+				}
+			}
+
+			@include respond-to($desktop) {
+				float: left;
+				overflow: visible;
+			}
+		}
+
+		@include respond-to($desktop) {
+			width: auto;
+		}
+	}
+
+	.dropdown-menu {
+		position: relative;
+		width: 100%;
+		background: $brand-light;
+		border-radius: 0;
+		margin: 0;
+		padding: 0;
+		border: none;
+		box-shadow: none;
+
+		&-header {
+			color: $brand-white;
+			padding: ($pad/4) (2.5*$pad);
+			font-size: 16px;
+			display: block;
+
+			&:hover, &:focus {
+				text-decoration: none;
+				background: rgba($brand-black, 0.1);
+			}
+
+			@include respond-to($desktop){
+				&:hover, &:focus {
+					text-decoration: underline;
+					background: none;
+				}
+			}
+		}
+
+		li {
+			text-shadow: 1px 1px 1px rgba($brand-black, 0.15);
+			width: 100%;
+			margin: 0;
+			padding: 0 2%;
+			font-size: 12px;
+			a {
+				width: 100%;
+				display: inline-block;
+				white-space: pre-wrap;
+				padding: 15px 3% 15px 5%;
+				border-bottom: 1px solid rgba($brand-white, 0.5);
+				color: $brand-white;
+
+				&:hover, &:focus {
+					text-decoration: none;
+					background: rgba($brand-black, 0.1);
+				}
+
+			}
+
+			&:last-child {
+				a {
+					border-bottom: none;
+				}
+			}
+		}
+
+		> ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			> li {
+
+				> a {
+					color: $brand-white;
+					display: block;
+					padding: ($pad/2) (3*$pad);
+					line-height: 1;
+					font-size: 16px;
+
+					&:hover, &:focus {
+						text-decoration: none;
+						background: rgba($brand-black, 0.1);
+					}
+				}
+			}
+
+			&:last-child {
+				> a {
+					padding: ($pad/2) (3*$pad);
+				}
+			}
+		}
+
+		@include respond-to($desktop){
+			position: absolute;
+			display: none!important;
+		}
+	}
+
+	.dropdown-menu-desktop {
+		@include order(4);
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
+		background: rgba($brand-blue-white, 0.95);
+		z-index: 100;
+		padding: 0;
+		overflow: hidden;
+		height: 0;
+
+		.dropdown-menu-header {
+			@include transition();
+			display: inline-block;
+			width: 25%;
+			margin: 0;
+			color: $brand-light;
+			padding: 0;
+
+			@include respond-to($desktop){
+				font-size: 38px;
+
+				&:hover, &:focus {
+					text-decoration: none;
+					background: none;
+					color: $brand-dark;
+				}
+			}
+
+			@include respond-to($screen-lg-min) {
+				font-size: 48px;
+			}
+		}
+
+		ul {
+			@include columns-number(3);
+			list-style-type: none;
+			width: 75%;	
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			display: inline;
+			float: right;
+			padding-left: 10px;
+			
+
+			li {
+				margin: 0 auto;
+
+				a {
+					width: 245px;
+					color: $brand-dark;
+					display: block;
+					position: relative;
+					padding: 0 0 10px 10px;
+
+					&:before {
+						@extend .fonticon;
+		                content: "\e60e";
+		                font-size: 8px;
+		                position: absolute;
+		                left: 0;
+		                top: 0;
+		                bottom: 0;
+		                color: $brand-dark;
+		                margin: auto 0;
+		                font-weight: bold;
+		                height: 18px;
+					}
+				}
+
+				@include respond-to($desktop){
+					display: inline-block;
+					position: relative;
+				}
+			}
+		}
+
+		&--container {
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		@include respond-to($desktop){
+			height: auto;
+			padding: 24px $pad 36px;
+		}
+
+		@include respond-to($content-max-width) {
+			padding: 24px 0 36px;
+		}
+
+	}
+
+	@include respond-to($desktop){
+		margin-bottom: 0;
+	}
+}

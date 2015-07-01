@@ -1,0 +1,31 @@
+/* ----- CMS-specific Overrides ----- */
+
+.page-content {
+    margin: (1.5*$pad) 0;
+    @include respond-to($screen-md-min) {
+        margin: $pad*2 0;
+    }
+}
+
+// #homepage-masthead-row {
+//     @include respond-to($content-max-width) {
+//         margin-bottom: -68px;
+//     }
+// }
+
+
+.masthead-container, 
+.primary-nav-container {
+	.ls-area,
+	.ls-area .ls-area-body {
+		overflow: visible;
+	}
+}
+
+.ls-canvas {
+    .ls-area,
+    .ls-area-body {
+        overflow: visible !important;
+        @include clearfix();
+    }
+}

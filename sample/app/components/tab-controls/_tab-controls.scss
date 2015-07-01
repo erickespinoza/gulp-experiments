@@ -1,0 +1,168 @@
+/* ----- Tab controls component styles ----- */
+
+.tab-controls {
+	padding: $pad 0px;
+
+	@include respond-to($screen-md-min) { 
+		overflow: hidden;
+	}
+
+	&__header {
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		color: $brand-light;
+		margin-top: 0;
+	}
+
+	&__link {
+		color: $brand-dark;
+	}
+
+	&__list {
+		margin: 0 45px;
+		position: relative;
+		@include respond-to($screen-md-min) { 
+			@include gradient(rgba(245,245,245,1), rgba(225,225,225,1), right);
+			border-radius: 6px;
+			margin: 0;
+		}
+
+		&__wrapper {
+			@include respond-to($screen-md-min) {
+				display: flex; 
+				-ms-flex-wrap: wrap;
+				overflow: hidden;
+			}
+		}
+
+		&__tab {
+			@include transition();
+			background-color: mix($brand-grey-background, #ccc, 50%);
+			border-radius: 6px;
+			cursor: pointer;
+			display: block;
+			height: 75px;
+
+			&:hover, &:focus {
+				text-decoration: none;
+				.tab-controls__list__text {
+					color: $brand-dark;
+				}
+			}
+
+			&.is-active,
+			&.is-active:hover,
+			&.is-active:focus {
+				background-color: $brand-light;
+
+				.tab-controls__list__text {
+					color: $brand-white;
+				}
+				
+				&:hover {
+					.tab-controls__list__text {
+						color: $brand-white;
+					}
+				}
+			}
+
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+
+			@include respond-to($screen-md-min) {
+				background-color: transparent;
+				flex: 1;
+				height: 60px;
+				position: relative;
+				
+				border-radius: 0;
+
+				&:hover,
+				&:focus {
+					background-color: rgba($brand-white, 0.25);
+				}
+
+				&.is-active {
+					background-color: $brand-light;
+					&:after {
+						display: none;
+					}
+					&:hover,
+					&:focus {
+						background-color: $brand-light;
+					}
+				}
+				
+				
+
+				&:first-child {
+					border-top-left-radius: 6px;
+					border-bottom-left-radius: 6px;
+				}
+
+				&:last-child {
+					border-top-right-radius: 6px;
+					border-bottom-right-radius: 6px;
+
+					&:after {
+						display: none;
+					}
+				}
+
+				&--large {
+					flex: 1.5;
+				}
+
+				&:after {
+					@include border-gradient-bottom($brand-grey-light, 75%, 2px);
+				}
+
+			}
+		}
+
+		&__text {
+			@include vertical-align();
+			@include transition(color);
+			color: $brand-grey;
+			font-size: 16px;
+			display: block;
+			padding: 0 10px;
+			text-align: center;
+		}
+
+		&__nav {
+
+			.owl-next, .owl-prev {
+				@extend .fonticon;
+				color: $brand-grey;
+				font-size: 42px;
+				height: 100px;
+				margin: auto;
+				padding: 29px 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				font-weight: normal;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			.owl-next {
+				@extend .icon-arrow-nav-right;
+				right: 0;
+				margin-right: -42px;
+			}
+
+			.owl-prev {
+				@extend .icon-arrow-nav-left;
+				left: 0;
+				margin-left: -42px;
+			}
+			
+		}
+	}
+}

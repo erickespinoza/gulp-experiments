@@ -1,0 +1,62 @@
+/* ----- Page pipeline component styles ----- */
+
+.pipeline {
+        
+    td.no {
+	    display: none;
+    }
+    
+    .sr-only {
+    	position: relative;
+	    width: auto;
+		height: auto;
+		overflow: visible;
+		clip: auto;
+
+    }
+    
+    .back-to-top {
+    	float: right;
+    }
+
+    .windowshade {
+	    margin: 15px 0px;
+	    clear: right;
+    }
+    
+    td {
+	    border-bottom: none;
+    }
+    
+    td:first-child {
+	    font-weight: bold;
+    }
+    
+
+    
+    @include respond-to ($screen-sm-min) {
+	     
+	    tr {
+		    border-bottom: 1px solid $brand-white;
+	    }
+	    
+	    .sr-only {
+	    	position: absolute;
+		    width: 1px;
+		    height: 1px;
+		    overflow: hidden;
+		    clip: rect(0,0,0,0);
+	    }
+	    
+    	td.no {
+		    display: table-cell;
+	    }
+	   
+	    td.yes {
+	    	background-color: $brand-light;
+	    	color: $brand-white;
+	    }
+    }
+
+}
+

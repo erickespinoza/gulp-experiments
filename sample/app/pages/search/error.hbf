@@ -1,0 +1,5 @@
+{{> searchForm }}
+<h5 class="search__num-results">
+	{{#if message }}{{message}}{{/if}}
+	{{#unless message }}An unknown error occurred. Please check your search terms and try again.{{/unless}}
+</h5>

@@ -1,0 +1,356 @@
+{
+    "[global]": {
+
+    	".flat-wrapper > a": {
+            "WT": {
+            	"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_HomeButton",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+    	},
+        ".utility-nav a": {
+            "WT": {
+            	"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        },
+        ".main-nav a": {
+        	"stopPropagation": true,
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        },
+        ".dropdown-menu-header a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        },
+        ".dropdown-menu-desktop ul a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".dropdown-menu-desktop--container > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_[text]",
+                "WT.cg_n": "Global_Header",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".footer__section > a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Footer_Head_[text]",
+                "WT.cg_n": "Global_Footer_Head",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".footer__section > ul > li > a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Footer_[text]",
+                "WT.cg_n": "Global_Footer",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".footer__section > ul > li > ul > li > a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Footer_sublink_[text]",
+                "WT.cg_n": "Global_Footer",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".footer__social-links a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Footer_[text]",
+                "WT.cg_n": "Global_Footer",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".footer__copyrights a": {
+        	"WT": {
+        		"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Footer_[text]",
+                "WT.cg_n": "Global_Footer",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .masthead__link": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Carousel_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Carousel",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .feature-2up .feature-slot a:nth(0)": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Card1_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Card1",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .feature-2up .feature-slot a:nth(1)": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Card2_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Card2",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .feature-newsroom__title a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Newsroom_title_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Newsroom_title",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .feature-newsroom > div > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Newsroom_link_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Newsroom_link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .story-carousel__headline:nth(0) a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Spark_Stories_title_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Spark_Stories_title",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .story-carousel__slider:nth(0) .item a": {
+             "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Spark_Stories_link_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Spark_Stories_link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .story-carousel__headline:nth(1) a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Our_Therapies_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Our_Therapies",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-homepage .story-carousel__slider:nth(1) .item a": {
+             "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Homepage",
+                "WT.event": "Baxalta_Homepage_Our_Therapies_link_[text]",
+                "WT.cg_n": "Baxalta_Homepage_Our_Therapies_link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-about-us-leadership .secondary-nav .secondary-nav__heading": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Landingpage",
+                "WT.event": "Baxalta_Leadership_Navigation_Title_[text]",
+                "WT.cg_n": "Baxalta_Leadership_Navigation_Title",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-about-us-leadership .secondary-nav ul li > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Landingpage",
+                "WT.event": "Baxalta_Leadership_Navigation_Link_[text]",
+                "WT.cg_n": "Baxalta_Leadership_Navigation_Link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-about-us-leadership .tab-controls__list a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Landingpage",
+                "WT.event": "Baxalta_Leadership_Tab_[text]",
+                "WT.cg_n": "Baxalta_Leadership_Tab",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-about-us-leadership .person-item ul > li > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Landingpage",
+                "WT.event": "Baxalta_Leadership_link_[text]",
+                "WT.cg_n": "Baxalta_Leadership_link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-news-article .secondary-nav .secondary-nav__heading": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "News_Article",
+                "WT.event": "Baxalta_News_Article_Navigation_Title_[text]",
+                "WT.cg_n": "Baxalta_News_Article_Navigation_Title",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-news-article .secondary-nav ul li > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "News_Article",
+                "WT.event": "Baxalta_News_Article_Navigation_Link_[text]",
+                "WT.cg_n": "Baxalta_News_Article_Navigation_Link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-news-article .page-actions ul li a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "News_Article",
+                "WT.event": "Baxalta_News_Article_Actions_[text]",
+                "WT.cg_n": "Baxalta_News_Article_Actions",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-news-article .feature-tile": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "News_Article",
+                "WT.event": "Baxalta_News_Article_Tile_[text]",
+                "WT.cg_n": "Baxalta_News_Article_Tile",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-product-list .secondary-nav .secondary-nav__heading": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Product_List",
+                "WT.event": "Baxalta_Product_List_Navigation_Title_[text]",
+                "WT.cg_n": "Baxalta_Product_List_Navigation_Title",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-product-list .secondary-nav ul li > a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Product_List",
+                "WT.event": "Baxalta_Product_List_Navigation_Link_[text]",
+                "WT.cg_n": "Baxalta_Product_List_Navigation_Link",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-product-list .product-list-item__links a": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Product_List",
+                "WT.event": "Baxalta_Product_List_Navigation_Exit_[text]",
+                "WT.cg_n": "Baxalta_Product_List_Navigation_Exit",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        ".body-styled-form form :submit": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "Contact_Us",
+                "WT.event": "Baxalta_Contact_Us_Submit_[text]",
+                "WT.cg_n": "Baxalta_Contact_Us_Submit",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        "button.btn-primary.interstitialConfirm": {
+            "WT": {
+                "WT.dl": "21",
+                "WT.ti": "",
+                "WT.event": "Baxalta_Interstitial_Button_[text]",
+                "WT.cg_n": "Baxalta_Interstitial_Button",
+                "WT.cg_s": "[text]"
+            }
+        }
+        
+    },
+    "[custom]": [
+        {
+            "id": "track-000001",
+            "WT": {
+            	"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Header_Sarch_[text]",
+                "WT.cg_n": "Global_Header_Search",
+                "WT.cg_s": "[text]"
+            }
+        },
+
+        {
+            "id": "track-000002",
+            "WT": {
+            	"WT.dl": "21",
+                "WT.ti": "N/A",
+                "WT.event": "Global_Test_[text]",
+                "WT.cg_n": "Global_Test",
+                "WT.cg_s": "[text]"
+            }
+        }
+    ]
+    
+}

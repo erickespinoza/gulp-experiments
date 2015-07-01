@@ -1,0 +1,18 @@
+{
+	"news": 
+    {
+        "title": "Baxalta Values",
+    	"caption": "Lorem ipsum dolor sit amet",
+        "variant": "half-right"
+    },
+    "values":
+    {
+        "title": "Baxalta Values",
+        "caption": "Lorem ipsum dolor sit amet"
+    },
+    "component":
+    {
+        "title": "Lorem ipsum",
+        "caption": "Lorem ipsum dolor sit amet"
+    }
+}

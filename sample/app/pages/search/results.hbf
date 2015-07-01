@@ -1,0 +1,27 @@
+{{#unless totalRows }}
+	{{> searchForm }}
+	<h5 class="search__num-results">No results found containing "<span class="search__term">{{ query }}</span>"</h5>
+{{/unless}}
+{{#if totalRows }}
+
+	<hgroup class="page-headings">
+		<h1>Search Results</h1>
+	</hgroup>
+
+	{{> searchForm }}
+
+	<h5 class="search__num-results">Results {{ fromRecord }} - {{ toRecord }} of {{ totalRows }} returned containing "<span class="search__term">{{ query }}</span>"</h5>
+
+	<div class="search__results">
+		{{#each results }}
+			<div class="search__results__result">
+				{{#if title }}<a href="{{ url }}" class="search__results__result__title">{{ title }}</a>{{/if}}
+				{{#if summary }}<p class="search__results__result__desc">{{{ summary }}}</p>{{/if}}
+				<a href="{{ url }}" class="search__results__result__link">{{ url }}</a>
+			</div>
+		{{/each}}
+	</div>
+
+	{{> pagination this }}
+
+{{/if}}

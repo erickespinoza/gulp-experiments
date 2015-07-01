@@ -1,0 +1,19 @@
+---
+title: Product Listing
+slug: product-list
+list: done
+layout: sidebar-layout
+subnav: true
+---
+
+<div class="product-list" data-action-name="productList">
+
+    {{> section-intro section-intro.product-list }}
+
+    {{> tab-controls tab-controls.product-list }}
+	
+	{{#each product-list-item.items }}
+    	{{> product-list-item this }}
+    {{/each}}
+
+</div>

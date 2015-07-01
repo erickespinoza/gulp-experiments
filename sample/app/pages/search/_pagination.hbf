@@ -1,0 +1,9 @@
+<div class="search__pagination">
+	<ul class="search__pagination__list">
+        <li class="prev {{#unless pagination.prev }}disabled{{/unless}}"><a href="/search.html?q={{ query }}{{#if pagination.prev }}&p={{ pagination.prev }}{{/if}}">Prev</a></li>
+        {{#if pagination.prev }}<li><a href="/search.html?q={{ query }}{{#if pagination.prev }}&p={{ pagination.prev }}{{/if}}">{{ pagination.prev }}</a></li>{{/if}}
+        <li class="active"><a href="#">{{ pagination.page }}</a></li>
+        {{#unless pagination.prev }}<li><a href="/search.html?q={{ query }}{{#if pagination.next }}&p={{ pagination.next }}{{/if}}">{{ pagination.next }}</a></li>{{/unless}}
+        <li class="next {{#unless pagination.next }}disabled{{/unless}}"><a href="/search.html?q={{ query }}{{#if pagination.next }}&p={{ pagination.next }}{{/if}}">Next</a></li>
+    </ul>
+</div>

@@ -1,0 +1,65 @@
+.country-selector {  
+    padding: $pad 0 $pad*1.5;
+
+    h1 {
+        margin: $pad 0 10px 0;
+        font-size: $heading-size-m;
+        color: $brand-light;
+        font-weight: 100;
+    }
+
+    &__heading {
+        @include font-display-light();
+        font-size: $heading-size-xxs;
+        margin-bottom: $pad;
+    }
+
+    &__options {
+        ul {
+            @include columns-number(1);
+            @include columns-gap(0);
+            list-style: none;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0 $pad;
+            li {
+                font-size: $heading-size-xs;
+                margin: 0 auto;
+                a {
+                    padding: 10px 0;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin: $pad*3 0 $pad;
+        font-weight: 200;
+        color: $brand-grey;
+        ul {
+            list-style: disc;
+            padding-left: $pad;
+            margin-left: 0;
+            li {
+                padding-left: 0;
+                margin: 0 0 0.25em;
+                padding: 0 0 $pad/2 0;
+            }
+            li > a {
+                font-weight: 200;
+            }
+        }
+    }
+
+    @include respond-to($tablet) {
+        
+        &__options {
+            ul {
+                @include columns-number(3);
+                @include columns-gap(50px);
+                padding: 0;
+            }
+        }
+    }
+}

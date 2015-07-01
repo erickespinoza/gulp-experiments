@@ -1,0 +1,19 @@
+/* ----- Component library page styles ----- */
+
+.component-library {
+
+	.h1 {
+		font-size: 32px;
+
+		@include respond-to($tablet) {
+			font-size: $font-size-h1;
+		}
+	}
+
+	.textarea {
+		min-width: 100%;
+		max-width: 100%;
+		font-weight: bold;
+	}
+
+}

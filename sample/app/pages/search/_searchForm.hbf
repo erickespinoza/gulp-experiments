@@ -1,0 +1,5 @@
+<form action="search.html" method="GET" name="searchForm" class="searchForm results hide-mobile">
+	<input type="text" placeholder="Search this website" name="q" autofocus>
+	<input type="submit" value=" ">
+	<div class="searchIcon">&#58904;</div>
+</form>

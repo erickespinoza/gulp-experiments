@@ -1,0 +1,71 @@
+/* ----- Rail featured tiles component styles ----- */
+
+.rail-featured-tiles {
+	padding: 0;
+
+	@include respond-to($screen-sm-min, $screen-sm-max) {
+		@extend .row;
+	}
+
+	@include respond-to($screen-md-max, max) {
+		display: none; // hide or else would push main content down
+	}
+
+	&__heading {
+		@extend .heading-sidebar;
+		@extend .col-xs-12;
+	}
+
+	&__element {
+		display: block;
+		overflow: hidden;
+		cursor: pointer;
+		margin: 0 0 $pad;
+
+		@include respond-to($screen-sm-min, $screen-sm-max) {
+			@extend .col-sm-6;
+			@extend .col-md-12;
+		}
+
+		&:hover, &:focus {
+			color: $brand-white;
+			text-decoration: none;
+		}
+
+		&__background {
+			width: 100%;
+
+		}
+
+		[class^='icon-'] {
+			font-size: 0.8em;
+		}
+
+		&__content {
+			width: 100%;
+			padding: $pad;
+			background: $brand-light;
+			color: $brand-white;
+			font-size: $body-copy-size-m;
+			line-height: 1.3;
+
+			&:hover, 
+			&:focus {
+				color: $brand-white;
+			}
+
+			@include respond-to($screen-md-min) {
+				padding: ($pad/2);
+			}
+
+			@include respond-to($content-max-width){
+				font-size: $body-copy-size-l;
+				padding: $pad;
+			}
+		}
+	}
+
+	@include respond-to($screen-md-min){
+		padding: 0 $pad;
+	}
+}

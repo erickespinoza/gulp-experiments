@@ -1,0 +1,13 @@
+<div class="person-item">
+
+	<ul>
+    	{{#each persona-item}}
+    		<li><a href="{{ link }}" title="person item {{@index}}">
+    			<img src="{{image.source}}" alt="{{image.alt-text}}" />
+    			<h3> {{ name }}, {{ title }} - {{ posting }}, {{ division }}</h3>
+    			<p>{{ description }}</p>
+    		</a></li>
+		{{/each}}
+    </ul>
+
+</div>

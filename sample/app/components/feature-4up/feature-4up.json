@@ -1,0 +1,43 @@
+{
+    "landing": {
+        "title": "In this Section",
+        "tiles": [
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/3",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/4",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/5",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/6",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/7",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            },
+            {
+                "title": "Lorem ipsum dolor",
+                "url": "#",
+                "img": "http://lorempixel.com/900/600/nature/8",
+                "copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }
+        ]
+    }
+}

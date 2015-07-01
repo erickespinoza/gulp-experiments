@@ -1,0 +1,23 @@
+---
+title: Press Releases List
+slug: press-releases
+list: done
+layout: sidebar-layout
+subnav: true
+---
+
+<div class="press-releases">
+
+    {{> section-intro section-intro.press-releases }}
+
+    {{> tab-controls }}
+
+	{{#each result-feature.results }}
+    	{{> result-feature this }}
+    {{/each}}
+
+	{{#each result-link.results }}
+    	{{> result-link this }}
+    {{/each}}
+
+</div>

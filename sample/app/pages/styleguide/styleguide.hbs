@@ -1,0 +1,429 @@
+---
+title: Styleguide
+slug: styleguide
+list: reference
+layout: minimal
+---
+
+<div class="styleguide container-fluid" data-action-name="styleguide">
+
+    <h1>Styleguide</h1>
+
+    <p class="lead">This page is intended to serve as a living style guide of components on the site, complete with code references where applicable.</p>
+
+    <div class="row">
+        <section class="styleguide__section col-xs-12">
+
+            <h2 class="styleguide__heading2">Color Palette</h2>
+
+            <ul class="styleguide__colorlist">
+                <li class="brand-blue-white">$brand-blue-white</li>
+                <li class="brand-dark">$brand-dark</li>
+                <li class="brand-light">$brand-light</li>
+                <li class="brand-black">$brand-black</li>
+                <li class="brand-white">$brand-white</li>
+                <li class="brand-grey">$brand-grey</li>
+                <li class="brand-grey-light">$brand-grey-light</li>
+                <li class="color-text">$color-text</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="styleguide__section col-xs-12">
+
+            <h2 class="styleguide__heading2">Gradients</h2>
+
+            <p>Use our gradient mixin to define custom colors <code>@include gradient(#color1, #color2, direction);</code>.<br />You can pass an optional direction argument to each but 'bottom' is the default.</p>
+
+            <ul class="styleguide__gradientlist">
+                <li class="gradient-light-blue">
+                   @include gradient-light-blue();
+                </li>
+                <li class="gradient-med-blue">
+                   @include gradient-med-blue();
+                </li>
+               
+            </ul>
+        </section>
+    </div> 
+
+    <div class="row">
+        <section class="styleguide__section col-xs-12 col-sm-6">
+
+            <h2 class="styleguide__heading2">Typography</h2>
+
+            <p class="styleguide__desc">The font for Baxalta is Whitney.</p>
+
+            <code class="code-label">h1 and h2</code>
+            <h1>Heading Level 1: Page Title</h1>
+            <h2>Heading Level 2: Page Subtitle</h2>
+
+            <code class="code-label">h3 and h4</code>
+            <h3>Heading Level 3: Section Title</h3>
+            <h4>Heading Level 4: Section Subtitle</h4>
+
+            <code class="code-label">h5 and h6</code>
+            <h5>Heading Level 5: Subsection Title</h5>
+            <h6>Heading Level 6: Subsection Subtitle</h6>
+
+            <code class="code-label">p.lead</code>
+            <p class="lead">Paragraph Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros.</p>
+
+            <code class="code-label">p</code>
+            <p>Paragraph Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros. <strong>Pellentesque habitant</strong> morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam laoreet lacus lacus, ut scelerisque massa porttitor eu. Etiam <em>suscipit purus arcu</em>, sed ultricies metus lobortis at. Curabitur ante nibh, iaculis sit amet vehicula nec, rutrum non ante.</p>
+
+        </section>
+
+        <section class="styleguide__section col-xs-12 col-sm-6">
+
+            <h2 class="styleguide__heading2">Lists</h2>
+
+            <code class="code-label">ul</code>
+
+            <ul>
+                <li>List item (unordered)</li>
+                <li>List item with longer text</li>
+                <li>Another list item</li>
+            </ul>
+
+            <code class="code-label">ol</code>
+
+            <ol>
+                <li>List item (ordered)</li>
+                <li>List item with longer text</li>
+                <li>Another list item</li>
+            </ol>
+
+            <code class="code-label">dl</code>
+
+            <dl>
+                <dt>Definition term</dt>
+                <dd>Definition definition</dd>
+                <dt>Definition term</dt>
+                <dd>Definition definition</dd>
+                <dd>Definition definition</dd>
+            </dl>
+
+            <code class="code-label">ul.list-styled</code>
+
+            <ul class="list-styled">
+                <li>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a></li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    </ul>
+                </li>
+                <li>Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+            </ul>
+
+            <code class="code-label">ul.list-carets</code>
+            <ul class="list-carets">
+                <li>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a></li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+                    </ul>
+                </li>
+                <li>Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+            </ul>
+
+        </section>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="styleguide__heading2">Callouts</h2>
+
+            <div class="row">
+                <section class="styleguide__section col-xs-12 col-sm-6">
+
+                    <code class="code-label">blockquote</code>
+                    <blockquote>
+                        <p><span class="blockquote__quote-start">&ldquo;</span>
+                        Mauris faucibus sed leo id fringilla. Duis hendrerit, sapien ac <strong>bibendum faucibus</strong>, velit purus viverra turpis, vitae volutpat augue ipsum id dolor. Aliquam nec tristique augue.
+                        <span class="blockquote__quote-end">&rdquo;</span></p>
+                        <cite>&mdash; Firstname Lastname, Ph.D.
+                            <br />Second line of attribution
+                        </cite>
+                    </blockquote>
+                </section>
+
+                <section class="styleguide__section col-xs-12 col-sm-6">
+
+                    <p>Optionally, add the following classes to the .image-container div in order to effect its width and position on large screens:</p>
+                    <ul>
+                        <li>.half-left</li>
+                        <li>.half-right</li>
+                        <li>.onethird-left</li>
+                        <li>.onethird-right</li>
+                    </ul>
+
+                    <code class="code-label">.image-container and .caption</code>
+                    <div class="image-container">
+                        <a href="#">
+                            <img src="http://placehold.it/800x400/" />
+                        </a>
+                        <p class="caption">Caption for the image above, if needed.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    {{!-- <div class="row">
+        <section class="styleguide__section col-xs-12">
+
+            <h2 class="styleguide__heading2">Section Content</h2>
+
+            <code class="code-label">.section-content</code>
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nibh massa. Quisque sagittis, libero eleifend volutpat mattis, lacus tortor facilisis justo, et auctor enim sem eu dui. Aliquam nec tristique augue, sit amet facilisis libero. Maecenas sit amet pellentesque ligula, et tincidunt justo. Vivamus non consequat velit. Mauris ac urna ut libero ornare volutpat. Nulla sit amet placerat turpis, suscipit viverra massa.</p>
+            </div>
+
+            <code class="code-label">.section-content.section-content--columns2</code>
+            <div class="section-content section-content--columns2">
+                <div class="section-column">
+                    <h3 class="section-subheading">Section Subheading</h3>
+                    <p>Phasellus eget arcu quis velit ultricies luctus eu ac justo. Ut lobortis purus ac justo dictum tristique. Integer efficitur ullamcorper orci eget consectetur. Mauris faucibus sed leo id fringilla. Duis hendrerit, sapien ac bibendum faucibus, velit purus viverra turpis, vitae volutpat augue ipsum id dolor.</p>
+                    <a href="#" class="section-cta">CTA if needed</a>
+                </div>
+                <div class="section-column">
+                    <h3 class="section-subheading">Section Subheading</h3>
+                    <p>Pellentesque vitae eleifend lorem. Praesent dui lacus, efficitur a massa at, sagittis sollicitudin sem. Morbi dictum sed elit quis dignissim. Donec sed luctus felis, auctor mollis ante. Curabitur accumsan massa id suscipit scelerisque.</p>
+                    <ul class="bulleted-list">
+                        <li>Donec sed luctus felis.</li>
+                        <li>Curabitur accumsan massa id suscipit scelerisque. Proin suscipit eu risus vel dignissim.</li>
+                        <li>Sed non purus mauris. Vestibulum non lectus dui. Ut vel cursus dui.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <code class="code-label">.section-content.section-content--columns3</code>
+            <div class="section-content section-content--columns3">
+                <div class="section-column">
+                    <h3 class="section-subheading">Section Subheading</h3>
+                    <p>Phasellus eget arcu quis velit ultricies luctus eu ac justo. Ut lobortis purus ac justo dictum tristique. Integer efficitur ullamcorper orci eget consectetur. Mauris faucibus sed leo id fringilla. Duis hendrerit, sapien ac bibendum faucibus, velit purus viverra turpis, vitae volutpat augue ipsum id dolor.</p>
+                </div>
+                <div class="section-column">
+                    <h3 class="section-subheading">Section Subheading</h3>
+                    <p>Pellentesque vitae eleifend lorem.</p>
+                    <ul class="bulleted-list">
+                        <li>Donec sed luctus felis.</li>
+                        <li>Curabitur accumsan massa id suscipit scelerisque. Proin suscipit eu risus vel dignissim.</li>
+                        <li>Sed non purus mauris. Vestibulum non lectus dui. Ut vel cursus dui.</li>
+                    </ul>
+                    <p>Praesent dui lacus, efficitur a massa at, sagittis sollicitudin sem. Morbi dictum sed elit quis dignissim.</p>
+                </div>
+                <div class="section-column">
+                    <h3 class="section-subheading">Section Subheading</h3>
+                    <p>Phasellus eget arcu quis velit ultricies luctus eu ac justo. Ut lobortis purus ac justo dictum tristique. Integer efficitur ullamcorper orci eget consectetur. Mauris faucibus sed leo id fringilla. Duis hendrerit, sapien ac bibendum faucibus, velit purus viverra turpis, vitae volutpat augue ipsum id dolor.</p>
+                </div>
+            </div>
+
+        </section>
+    </div> --}}
+
+    <div class="row">
+        <section class="styleguide__section col-xs-12 col-sm-6">
+
+            <h2 class="styleguide__heading2">Buttons &amp; Links</h2>
+
+            {{!-- <code class="code-label">.standalone-link</code>
+            <a href="#" class="standalone-link">Standalone Link Text</a> --}}
+
+            <p>Paragraph Text Lorem ipsum dolor sit amet, <a href="#">link in running text</a> adipiscing elit. Fusce sem arcu, lobortis sollicitudin dolor ac, euismod accumsan eros.</p>
+
+            <code class="code-label">.arrow-link</code>
+
+            <p><a href="#" class="arrow-link">Linked section with a trailing arrow</a></p>
+
+            {{!-- <h3 class="styleguide__heading3">Buttons</h3>
+
+            <code class="code-label">.cta</code>
+            <button type="button" class="cta">Button<span class="icon-rss"></span></button>
+
+            <code class="code-label">.cta-reverse</code>
+            <div style="background-color: #666; padding: 15px;">
+                <button type="button" class="cta-reverse">Button<span class="icon-email"></span></button>
+            </div> --}}
+
+            {{!-- <code class="code-label">.btn.btn-primary</code>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-primary">Primary</button>
+
+            <code class="code-label">.btn.btn-success</code>
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success">Success</button>
+
+            <code class="code-label">.btn.btn-info</code>
+            <!-- Contextual button for informational alert messages -->
+            <button type="button" class="btn btn-info">Info</button>
+
+            <code class="code-label">.btn.btn-warning</code>
+            <!-- Indicates caution should be taken with this action -->
+            <button type="button" class="btn btn-warning">Warning</button>
+
+            <code class="code-label">.btn.btn-danger</code>
+            <!-- Indicates a dangerous or potentially negative action -->
+            <button type="button" class="btn btn-danger">Danger</button>
+
+            <code class="code-label">.btn.btn-link</code>
+            <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+            <button type="button" class="btn btn-link">Link</button> --}}
+
+        </section>
+
+        <section class="styleguide__section col-xs-12 col-sm-6">
+
+            <h2 class="styleguide__heading2">Tables</h2>
+
+            <code class="code-label">table.table</code>
+
+            <table class="table">
+                <tcaption>Table Caption</tcaption>
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                        <td>Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                        <td>Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                        <td>Cell 3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="styleguide__section col-xs-12 col-sm-6">
+
+            <h2 class="styleguide__heading2">Messaging</h2>
+
+            <code class="code-label">.alert.alert-info</code>
+            <p class="alert alert-info">This is a purely <strong>informational</strong> message.</p>
+
+            <code class="code-label">.alert.alert-warning</code>
+            <p class="alert alert-warning">This message <strong>warns</strong> you about something.</p>
+
+            <code class="code-label">.alert.alert-danger</code>
+            <p class="alert alert-danger">This message indicates a major warning or <strong>error</strong>.</p>
+
+            <code class="code-label">.alert.alert-success</code>
+            <p class="alert alert-success">This message indicates something happened <strong>successfully</strong>.</p>
+
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="styleguide__section col-xs-12">
+
+            <h2 class="styleguide__heading2">Forms</h2>
+
+            <p class="styleguide__desc">The following form example has no class on the parent form, but each set of label and related input are wrapped in a <code>.form-group</code>. Each input has a <code>.form-control</code> class applied, and the checkbox sits in a <code>.checkbox</code> div, while the checkbox input sits inside its own label.</p>
+
+            <form role="form">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                 <div class="form-group">
+                    <label for="select_id">Select</label>
+                    <label class="form-select">
+                        <select id="select_id" class="form-control">
+                            <option value="">Please select</option>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                            <option value="">Option 4</option>
+                            <option value="">Option 5</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <p class="styleguide__desc">The example below uses Bootstrap grid classes to layout the label and input area widths.</p>
+
+            <code class="code-label">.form-horizontal</code>
+
+            <form class="form-horizontal styled-form" role="form">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-sm-2 control-label" for="select_id">Select</label>
+                    <div class="col-sm-10">
+                        <label class="form-select">
+                            <select id="select_id" class="form-control">
+                                <option value="">Please select</option>
+                                <option value="">Option 1</option>
+                                <option value="">Option 2</option>
+                                <option value="">Option 3</option>
+                                <option value="">Option 4</option>
+                                <option value="">Option 5</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+                
+            </form>
+
+        </section>
+    </div>
+</div>

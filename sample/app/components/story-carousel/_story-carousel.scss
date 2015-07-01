@@ -1,0 +1,116 @@
+/* ----- Story carousel component styles ----- */
+.story-carousel {
+    padding-bottom: $pad;
+
+    .feature-tile {
+        padding-top: $pad/2;
+    }
+
+	&__slider {
+        @include respond-to($screen-xs-max, max) {
+            width: calc(100% + 40px);
+            margin-left: -($pad);
+            margin-right: -($pad);
+        }
+		&__text {
+            font-size: $body-copy-size-s;
+			padding: $pad/2 0 0 0;
+			color: $color-text;
+		}
+
+		&__img {
+            @include transition();
+            .story-carousel--color-fade & {
+                @include transition();
+                filter: grayscale(1);
+            }
+		}
+
+		.item {
+			margin-bottom: $pad;
+            &:hover {
+                .story-carousel__slider__img {
+                    filter: brightness(115%);
+                }
+                .story-carousel--color-fade & {
+                    .story-carousel__slider__img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+		}
+
+		.owl-controls {
+	        text-align: center;
+	        .owl-dots {
+	            margin-top: 26px;
+	            padding: 0;
+	            .owl-dot {
+	                display: inline-block;
+	                border: 2px solid $brand-light;
+	                border-radius: $body-copy-size-s*2;
+	                margin: 0 $pad/2;
+	                span {
+	                    border-radius: $body-copy-size-s*2;
+	                    display: block;
+	                    height: $body-copy-size-s;
+	                    margin: 0;
+	                    width: $body-copy-size-s;
+	                }
+	                &.active {
+	                	background-color: $brand-light;
+	                    span {
+	                        background-color: $brand-light;
+	                    }
+	                }
+	            }
+	        }
+
+            .owl-nav {
+                margin: 10px auto 0px auto;
+                overflow: auto;
+                width: 80px;
+
+                @include respond-to($screen-sm-min) {
+                    display: none;
+                }
+
+                .owl-prev, .owl-next {
+                    @extend .fonticon;
+                    color: $brand-light;
+                    font-size: 22px;
+                }
+
+                .owl-prev {
+                    @extend .icon-arrow-nav-left;
+                    float: left;
+                }
+
+                .owl-next {
+                    @extend .icon-arrow-nav-right;
+                    float: right;
+                }
+            }
+	    }
+    }
+
+    &__headline {
+        a:hover {
+            text-decoration: none;
+        }
+    	@include respond-to($screen-xs-max, max) {
+			@include gradient-light-blue();
+            @include full-bleed();
+            padding-top: $pad;
+		}
+    }
+
+    &--no-text {
+        .item {
+            padding-bottom: $pad;
+        }
+        .story-carousel__slider__text {
+            display: none;
+        }
+    }
+}
