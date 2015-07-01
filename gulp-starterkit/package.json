@@ -1,0 +1,37 @@
+{
+  "name": "generator-gulp-starterkit",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Digitas Starterkit generator with gulp",
+  "main": "app/index.js",
+  "repository": "https://gitlab.digitas.com/starter-kit/generator-starterkit.git",
+  "author": {
+    "name": "William Butt",
+    "email": "william.butt@digitas.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "~1.0.0",
+    "yeoman-generator": "~0.20.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.5",
+    "shelljs": "~0.5.0",
+    "mkdirp": "~0.5.1",
+    "underscore.string": "~3.0.3"
+  },
+  "peerDependencies": {
+    "yo": "~1.4.6"
+  }
+}
