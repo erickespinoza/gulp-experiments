@@ -23,18 +23,18 @@ and will appear the gulp-starterkit generator
 to generate an project:
 
 ```
-yo starterkit:app
+yo gulp-starterkit:app
 ```
 
 to generate a page:
 
 ```
-yo starterkit:page
+yo gulp-starterkit:page
 ```
 
 to generate a component:
 
 ```
-yo starterkit:component
+yo gulp-starterkit:component
 ```
 
