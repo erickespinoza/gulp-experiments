@@ -95,6 +95,9 @@ gulp.task('clean:dist', function (cb) {
 gulp.task('clean:server', function (cb) {
   del(['.tmp/'], cb);
 });
+gulp.task('clear:afterdist', ['usemin'], function (cb) {
+  del(['dist/**/*.html', 'dist/*' ,'!dist/assets', '!dist/*.html'], cb);
+});
 
 gulp.task('jshint:dist', function () {
   return gulp.src([
@@ -450,7 +453,7 @@ gulp.task('connect', ['html:server'], function () {
 
 
 gulp.task('build', function () {
-  runSequence('clean:dist', 'usemin', 'notify:build');
+  runSequence('clean:dist', 'clear:afterdist', 'notify:build');
   
 });
 
