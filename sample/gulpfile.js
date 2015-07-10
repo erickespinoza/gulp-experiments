@@ -20,6 +20,8 @@ var notify = require('gulp-notify');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
+var foreach = require('gulp-foreach');
+require('events').EventEmitter.defaultMaxListeners = 0;
 
 gulp.task('watch', function() {
    // watch for changes
@@ -373,15 +375,12 @@ gulp.task('fonts:server', function () {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('notify:build',function(){
+gulp.task('notify:build', ['clear:afterdist'], function(){
   gulp.src('dist').
-  pipe(notify("Server is ready!"));
+  pipe(notify("Build complete!"));
   
 });
 
-gulp.task('notify:build', function(){
-
-});
 
 // gulp.task('extras', function () {
 //   return gulp.src([
@@ -392,7 +391,7 @@ gulp.task('notify:build', function(){
 //   }).pipe(gulp.dest('dist'));
 // });
 
-gulp.task('html:server', ['wiredep', 'sass', 'images:server', 'jshint:server', 'copy:server', 'assemble:server', ], function () {
+gulp.task('html:server', ['wiredep', 'sass', 'images:server', 'jshint:server', 'copy:server', 'assemble:server'], function () {
   // var assets = $.useref.assets({searchPath: ['dist', 'app', '.']});
 
   return gulp.src('.tmp/**/*.html')
@@ -411,8 +410,8 @@ gulp.task('html:server', ['wiredep', 'sass', 'images:server', 'jshint:server', '
 
 });
 
-gulp.task('html:dist', ['wiredep', 'stripmq:dist', 'images:dist', 'jshint:dist', 'copy:dist', 'assemble:dist', ], function () {
-  // var assets = $.useref.assets({searchPath: ['dist, app']});
+gulp.task('html:dist', ['wiredep', 'stripmq:dist', 'images:dist', 'jshint:dist', 'copy:dist', 'assemble:dist' ], function () {
+  var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
   return gulp.src('dist/**/*.html')
     .pipe($.rename({
@@ -424,20 +423,32 @@ gulp.task('html:dist', ['wiredep', 'stripmq:dist', 'images:dist', 'jshint:dist',
     // .pipe(assets.restore())
     // .pipe($.useref())
     // .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist/'));
     // .on('end', function(){browserSync.reload({stream: true})})
-    .pipe(reload({stream: true}));
+    // .pipe(reload({stream: true}));
 
 });
 
 gulp.task('usemin', ['html:dist'], function(){
-  gulp.src('dist/*.html')
-  .pipe(usemin({
-    js: [uglify()],
-    html: [minifyHTML({empty: true, loose: true})]
-  }))
-  .pipe(gulp.dest('dist/'))
-  .pipe(notify('Build complete!'));
+  return gulp.src('dist/*.html')
+  .pipe(foreach(function (stream, file) {
+      return stream
+        // 2) Move to here
+        .pipe(usemin({
+          js: [uglify()],
+          html: [minifyHTML({empty: true, loose: true})]
+        }))
+        // BE CAREFUL!!!
+        // This now has the CSS/JS files added to the stream
+        // Not just the HTML files you sourced
+        .pipe(gulp.dest('dist/'));
+    }))
+
+    // .pipe(usemin({
+  //   js: [uglify()],
+  //   html: [minifyHTML({empty: true, loose: true})]
+  // }))
+  // .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('connect', ['html:server'], function () {
@@ -451,14 +462,31 @@ gulp.task('connect', ['html:server'], function () {
   gulp.src('.tmp').pipe(notify("Server is ready!"));
 });
 
+// gulp.task('connect:dist',['build'], function () {
+//   browserSync({
+//     // notify: false,
+//     port: 9000,
+//     server: {
+//       baseDir: ['dist']
+//     }
+//   });
+//   gulp.src('dist').pipe(notify("Server is ready!"));
+// });
+
+
 
 gulp.task('build', function () {
-  runSequence('clean:dist', 'clear:afterdist', 'notify:build');
+  runSequence('clean:dist', 'notify:build');
   
 });
 
 gulp.task('serve', ['clean:server'], function () {
   runSequence('connect', 'watch');
 });
+
+// gulp.task('serve:dist', ['connect:dist'], function(){
+//   runSequence('build');
+// });
+
 
 
