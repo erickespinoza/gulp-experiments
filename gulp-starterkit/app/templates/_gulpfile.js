@@ -436,7 +436,7 @@ gulp.task('usemin', ['html:dist'], function(){
         // 2) Move to here
         .pipe(usemin({
           js: [uglify()],
-          html: [minifyHTML({empty: true, loose: true})]
+          html: [minifyHTML({empty: true, loose: true, conditionals: true})]
         }))
         // BE CAREFUL!!!
         // This now has the CSS/JS files added to the stream
