@@ -5,6 +5,7 @@ var shell = require('shelljs');
 var chalk = require('chalk');
 var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
+var _hw = require("html-wiring");
 
 var ComponentGenerator = yeoman.generators.Base.extend({
 
@@ -64,7 +65,7 @@ var ComponentGenerator = yeoman.generators.Base.extend({
     wireUpComponentSCSS: function () {
         console.log('Adding component scss import declaration to main.scss...');
         var path = 'app/assets/styles/main.scss',
-            file = this.readFileAsString(path);
+            file = _hw.readFileAsString(path);
 
         var lines = file.split('\n');
         var indexOfLastComponent = -1;
@@ -92,7 +93,7 @@ var ComponentGenerator = yeoman.generators.Base.extend({
     wireUpComponentJS: function () {
         console.log('Adding script tag to default.hbs...');
         var path = 'app/layouts/default.hbs',
-            file = this.readFileAsString(path);
+            file = _hw.readFileAsString(path);
 
         var lines = file.split('\n');
         var indexOfLastComponent = -1;

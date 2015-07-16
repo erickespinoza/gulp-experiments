@@ -35,7 +35,7 @@ gulp.task('watch', function() {
     'app/components/**/*.scss',
     'app/pages/**/*.scss'
   ], ['sass']);
-  
+
   gulp.watch([
       'app/assets/scripts/{,*/}*.js',
       'app/components/**/*.js',
@@ -191,11 +191,9 @@ gulp.task('wiredep', function () {
 gulp.task('rev', function() {
   return gulp.src([
       'dist/assets/scripts/{,*/}*.js',
-      'dist/pages/**/*.js',
-      'dist/components/**/*.js',
       '!dist/assets/scripts/vendor/*',
       'dist/assets/styles/{,*/}*.css',
-      'dist/assets/images/**/*.*',
+      // 'dist/assets/images/**/*.*',
       'dist/assets/styles/fonts/{,*/}*.*'
     ])
     .pipe(rev())
@@ -238,16 +236,33 @@ gulp.task('copy:dist', function () {
     // gulp.src(
     //   'app/pages/**/*.js'
     // ).pipe(gulp.dest('dist/pages/'));
-    gulp.src(
-      ['app/assets/vendor/**/*']
-    ).pipe(gulp.dest('dist/assets/vendor/'));
+
+
+    // gulp.src(
+    //   ['app/assets/vendor/**/*']
+    // ).pipe(gulp.dest('dist/assets/vendor/'));
+
+    // gulp.src(
+    //   'app/assets/styles/fonts/*'
+    // ).pipe(gulp.dest('dist/assets/styles/fonts/'));
+
+    // gulp.src('app/assets/json/*.json')
+    // .pipe(gulp.dest('dist/assets/json/'));
 
     gulp.src(
-      'app/assets/styles/fonts/*'
-    ).pipe(gulp.dest('dist/assets/styles/fonts/'));
+      [
+        'app/**',
+        '!app/layouts**',
+        '!app/pages**',
+        '!app/components**',
+        '!app/**/*.scss',
+        '!app/assets/images/**',
+        '!app/assets/scripts/core/**',
+        '!app/assets/scripts/global.js',
+        '!app/assets/scripts/util.js'
 
-    gulp.src('app/assets/json/*.json')
-    .pipe(gulp.dest('dist/assets/json/'));
+      ]
+    ).pipe(gulp.dest('dist/'));
 
 
 });
@@ -378,7 +393,7 @@ gulp.task('fonts:server', function () {
 gulp.task('notify:build', ['clear:afterdist'], function(){
   gulp.src('dist').
   pipe(notify("Build complete!"));
-  
+
 });
 
 
@@ -477,7 +492,7 @@ gulp.task('connect', ['html:server'], function () {
 
 gulp.task('build', function () {
   runSequence('clean:dist', 'notify:build');
-  
+
 });
 
 gulp.task('serve', ['clean:server'], function () {

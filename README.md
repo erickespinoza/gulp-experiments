@@ -45,12 +45,35 @@ npm install
 gulp serve
 ```
 
-working with sample
-
+make a build
 ```
-cd sample
-npm install
-gulp serve
+gulp build
+```
+
+#Specific changes for layouts and pages
+
+Layouts
+We will use: 
+```
+{% body %}
+```
+instead of
+```
+{{> body }}
+```
+
+Pages
+We will use:
+```
+---
+layout: default //remove all .hbs extention for layout
+---
+```
+instead of
+```
+---
+layout: default.hbs
+---
 ```
 
 

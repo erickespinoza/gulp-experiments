@@ -5,9 +5,10 @@ var shell = require('shelljs');
 var chalk = require('chalk');
 var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
+var _hw = require("html-wiring");
 
 var PageGenerator = yeoman.generators.Base.extend({
-    
+
     checkCWDandUsage: function () {
         var files = shell.ls();
         var inTopLevelDirectory = files.indexOf('app');
@@ -64,7 +65,7 @@ var PageGenerator = yeoman.generators.Base.extend({
     wireUpPageSCSS: function () {
         console.log('Adding page scss import declaration to main.scss...');
         var path = 'app/assets/styles/main.scss',
-            file = this.readFileAsString(path);
+            file = _hw.readFileAsString(path);
 
         var lines = file.split('\n');
         var indexOfLastPage = -1;
@@ -92,7 +93,7 @@ var PageGenerator = yeoman.generators.Base.extend({
     wireUpPageJS: function () {
         console.log('Adding script tag to default.hbs...');
         var path = 'app/layouts/default.hbs',
-            file = this.readFileAsString(path);
+            file = _hw.readFileAsString(path);
 
         var lines = file.split('\n');
         var indexOfLastPage = -1;

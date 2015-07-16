@@ -80,7 +80,7 @@ var StarterkitGenerator = yeoman.generators.Base.extend({
         mkdirp('app/assets/styles/fonts');
         mkdirp('app/assets/scripts/core');
         mkdirp('app/assets/scripts/vendor');
-        mkdirp('app/pages/home');
+        mkdirp('app/pages/index');
         mkdirp('app/bower_components');
     },
 
@@ -100,9 +100,9 @@ var StarterkitGenerator = yeoman.generators.Base.extend({
     },
 
     copyPagesLayoutsComponents: function () {
-        this.copy('pages_home/_home.scss', 'app/pages/home/_home.scss');
-        this.copy('pages_home/home.js', 'app/pages/home/home.js');
-        this.copy('pages_home/index.hbs', 'app/pages/home/index.hbs');
+        this.copy('pages_index/_index.scss', 'app/pages/index/_index.scss');
+        this.copy('pages_index/index.js', 'app/pages/index/index.js');
+        this.copy('pages_index/index.hbs', 'app/pages/index/index.hbs');
 
         this.template('layouts/default.hbs', 'app/layouts/default.hbs');
     },

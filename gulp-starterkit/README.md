@@ -1,9 +1,79 @@
-### What is Starterkit?
+# gulp-experiments
 
-Starterkit is a tool for stubbing out a web site architecture and wiring up the core pieces that are common across most of our web projects. Starterkit enables our teams to focus on the unique demands of each project instead of spending time on creating infrastructure.
+for gulp-starterkit yeoman generator:
 
-### Documentation
+clone the repository
 
-All documentation can be found on the Staterkit wiki
+```
+cd gulp-starterkit
+```
 
-[gitlab.digitas.com/starter-kit/generator-starterkit/wikis/home](https://gitlab.digitas.com/starter-kit/generator-starterkit/wikis/home)
+```
+npm link //(to add generator to yeoman)
+```
+
+to see if works:
+
+```
+yo --help
+```
+
+and will appear the gulp-starterkit generator
+
+to generate an project:
+
+```
+yo starterkit:app
+```
+
+to generate a page:
+
+```
+yo starterkit:page
+```
+
+to generate a component:
+
+```
+yo starterkit:component
+```
+
+begin with project (app)
+
+```
+npm install
+gulp serve
+```
+
+make a build
+```
+gulp build
+```
+
+#Specific changes for layouts and pages
+
+Layouts
+We will use: 
+```
+{% body %}
+```
+instead of
+```
+{{> body }}
+```
+
+Pages
+We will use:
+```
+---
+layout: default //remove all .hbs extention for layout
+---
+```
+instead of
+```
+---
+layout: default.hbs
+---
+```
+
+
